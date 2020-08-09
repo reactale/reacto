@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/reacto/static/css/main.caeb2cea.chunk.css",
+    "main.css": "/reacto/static/css/main.1ad705a8.chunk.css",
     "main.js": "/reacto/static/js/main.d600cf5d.chunk.js",
     "main.js.map": "/reacto/static/js/main.d600cf5d.chunk.js.map",
     "runtime-main.js": "/reacto/static/js/runtime-main.0c399921.js",
@@ -8,16 +8,16 @@
     "static/js/2.2c4050b2.chunk.js": "/reacto/static/js/2.2c4050b2.chunk.js",
     "static/js/2.2c4050b2.chunk.js.map": "/reacto/static/js/2.2c4050b2.chunk.js.map",
     "index.html": "/reacto/index.html",
-    "precache-manifest.0379d2c3695d706ac9504138de1415e3.js": "/reacto/precache-manifest.0379d2c3695d706ac9504138de1415e3.js",
+    "precache-manifest.ee68dfe317ecbfe01e24cdc027eeae9b.js": "/reacto/precache-manifest.ee68dfe317ecbfe01e24cdc027eeae9b.js",
     "service-worker.js": "/reacto/service-worker.js",
-    "static/css/main.caeb2cea.chunk.css.map": "/reacto/static/css/main.caeb2cea.chunk.css.map",
+    "static/css/main.1ad705a8.chunk.css.map": "/reacto/static/css/main.1ad705a8.chunk.css.map",
     "static/js/2.2c4050b2.chunk.js.LICENSE.txt": "/reacto/static/js/2.2c4050b2.chunk.js.LICENSE.txt",
     "static/media/all.min.css": "/reacto/static/media/fa-solid-900.f9b8a1aa.eot"
   },
   "entrypoints": [
     "static/js/runtime-main.0c399921.js",
     "static/js/2.2c4050b2.chunk.js",
-    "static/css/main.caeb2cea.chunk.css",
+    "static/css/main.1ad705a8.chunk.css",
     "static/js/main.d600cf5d.chunk.js"
   ]
 }
