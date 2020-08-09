@@ -1,0 +1,35 @@
+.display-panel .card-header, .display-panel .card-body {
+    position: relative;
+}
+
+.display-panel .card-header {
+    font-size: 18px;
+    background: #d50000;
+    color: #fff;
+}
+
+.display-panel .card-header .ico {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 22px;
+    padding: 15px 25px;
+}
+
+.input-in-disguise {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: inherit;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.display-panel .copy-reacto-icon {
+    position: absolute;
+    font-size: 22px;
+    top: 0;
+    right: 0;
+    padding: 20px 20px;
+    cursor: pointer;
+}

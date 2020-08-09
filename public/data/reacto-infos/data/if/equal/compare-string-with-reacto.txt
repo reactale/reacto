@@ -1,0 +1,4 @@
+((r.var.winner = Barry Allen))
+
+((r.if r.var.winner = Clark Kent)) {{ Superman won the race }}
+((r.if r.var.winner = Barry Allen)) {{ The Flash won the race }}

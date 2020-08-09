@@ -1,2 +1,3 @@
-# reacto
-The Website of Reacto
+# Reacto Website
+
+This is the website for `((r))` **Reacto**
