@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { withRouter } from "react-router";
+import { subdir } from '../../services/url.service'
 import './ReactDefCard.css'
 
 const ReactoDefCard = (props) => {
@@ -7,7 +8,7 @@ const ReactoDefCard = (props) => {
 	
 	const goPlayWithData = (ev, fileUrl) => {
 		ev.preventDefault()
-		let url = '/data/reacto-infos/data/' + fileUrl;
+		let url = `/${subdir}/data/reacto-infos/data/${fileUrl}`;
 		fetch(url)
 		.then(res => res.text())
 		.then(d => {

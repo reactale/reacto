@@ -5,6 +5,7 @@ import './assets/lib/fa-5.10/css/all.min.css'
 import './App.css'
 import Header from './components/partials/header/Header'
 import Routes from './components/common/Routes'
+import { subdir } from './components/services/url.service'
 // import Footer from './components/partials/footer/Footer'
 
 export const ContextReactoInfo = React.createContext()
@@ -15,7 +16,7 @@ function App() {
   
 
   useEffect( () => {
-    let reactoInfoIndexUrl = '/data/reacto-infos/index.json';
+    let reactoInfoIndexUrl = `/${subdir}/data/reacto-infos/index.json`;
     fetch(reactoInfoIndexUrl)
     .then(res => res.json())
     .then(d => {
