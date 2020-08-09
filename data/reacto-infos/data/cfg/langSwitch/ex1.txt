@@ -1,0 +1,19 @@
+In English,((r.cfg.langSwitch.en)) 
+today is a ((r.dt.day)) of a ((r.dt.month))
+and time is ((r.dt.hour24)):((r.dt.min)):((r.dt.sec))
+
+In Bengali,((r.cfg.langSwitch.beng)) 
+today is a ((r.dt.day)) of a ((r.dt.month))
+and time is ((r.dt.hour24)):((r.dt.min)):((r.dt.sec))
+
+In Oriya,((r.cfg.langSwitch.or)) 
+today is a ((r.dt.day)) of a ((r.dt.month))
+and time is ((r.dt.hour24)):((r.dt.min)):((r.dt.sec))
+
+In Hindi,((r.cfg.langSwitch.hind)) 
+today is a ((r.dt.day)) of a ((r.dt.month))
+and time is ((r.dt.hour24)):((r.dt.min)):((r.dt.sec))
+
+In Malayalam,((r.cfg.langSwitch.mal))
+today is a ((r.dt.day)) of a ((r.dt.month))
+and time is ((r.dt.hour24)):((r.dt.min)):((r.dt.sec))

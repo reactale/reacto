@@ -1,0 +1,6 @@
+((r.if. r.dt.date = 12)) {{ Today is 12 }}
+((r.if. r.dt.date != 12)) {{ Today is NOT 12 }}
+
+((r.var.killer = Joker))
+((r.if. r.var.killer = Joker)) {{ Joker is the killer }}
+((r.if. r.var.killer != Joker)) {{ Joker is NOT the killer }}
