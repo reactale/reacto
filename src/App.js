@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import './assets/lib/bootstrap-4.3.1.min.css'
 import './assets/lib/fa-5.10/css/all.min.css'
 import './App.css'
@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <Router basename="">
         <Header />
         
         <div className="container-fluid main-container">
@@ -37,7 +37,7 @@ function App() {
         </div>
         
         {/* <Footer /> */}
-      </BrowserRouter>
+      </Router>
     </div>
   );
 }

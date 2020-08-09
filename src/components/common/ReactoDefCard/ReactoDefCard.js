@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { withRouter } from "react-router";
 import { subdir } from '../../services/url.service'
 import './ReactDefCard.css'
+import { Link } from 'react-router-dom';
 
 const ReactoDefCard = (props) => {
 	const [isVisible, setVisibility] = useState(true)
@@ -42,13 +43,13 @@ const ReactoDefCard = (props) => {
 				props.rto.examples.map( (ex, i) => (
 					<div key={ex.name}>
 						{(i+1) + '. ' + ex.name + ' | '}
-						<a href="/playground" onClick={(ev) => goPlayWithData(ev, ex.fileUrl)} className="">Try it out</a>
+						<Link to="/playground" onClick={(ev) => goPlayWithData(ev, ex.fileUrl)} className="">Try it out</Link>
 						<i className="fas fa-angle-double-right theme-color ml-1"></i>
 					</div>
 				))
 			}
 		    {/* <div ng-repeat="ex in rto.examples">
-		    	<a href="/" ng-click="vm.goToPlayground(ex.fileUrl)" className="">Try it out</a>
+		    	<Link to="/" ng-click="vm.goToPlayground(ex.fileUrl)" className="">Try it out</Link>
 		    	<i className="fas fa-angle-double-right theme-color"></i>
 		    </div> */}
 		    

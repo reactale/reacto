@@ -1,5 +1,6 @@
 import React from 'react'
 import { ContextReactoInfo } from '../../../App'
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
@@ -28,7 +29,7 @@ const Home = () => {
                 <span>
                     Want to test some reactive text containing hundreds of reactos? Or just want to quicktest a simple
                     single reacto that you are planning to use? Don't worry, we got you covered. Just write / paste it in
-                    our <a href="/playground"><u>"Reacto Playground"</u></a> and click on Convert button to
+                    our <Link href="/playground"><u>"Reacto Playground"</u></Link> and click on Convert button to
                     see
                     the result.
                 </span>
@@ -46,10 +47,10 @@ const Home = () => {
                         { 
                             reactos => reactos.map( rto => 
                                 <li className="col-12 col-sm-6 col-md-4" key={rto.id}>
-                                    <a className="inner-container" href={'/reactos/' + rto.id}>
+                                    <Link className="inner-container" to={'/reactos/' + rto.id}>
                                         <i className={rto.iconClass + ' ico'}></i>
                                         <div>{rto.name}</div>
-                                    </a>
+                                    </Link>
                                 </li>                               
                             )
                             
