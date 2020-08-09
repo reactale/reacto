@@ -29,7 +29,7 @@ const Home = () => {
                 <span>
                     Want to test some reactive text containing hundreds of reactos? Or just want to quicktest a simple
                     single reacto that you are planning to use? Don't worry, we got you covered. Just write / paste it in
-                    our <Link href="/playground"><u>"Reacto Playground"</u></Link> and click on Convert button to
+                    our <Link to="/playground"><u>"Reacto Playground"</u></Link> and click on Convert button to
                     see
                     the result.
                 </span>
