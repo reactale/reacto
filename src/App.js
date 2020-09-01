@@ -16,7 +16,7 @@ function App() {
   
 
   useEffect( () => {
-    let reactoInfoIndexUrl = `/${subdir}/data/reacto-infos/index.json`;
+    let reactoInfoIndexUrl = `${subdir}/data/reacto-infos/index.json`;
     fetch(reactoInfoIndexUrl)
     .then(res => res.json())
     .then(d => {
