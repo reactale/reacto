@@ -11,6 +11,7 @@ const LeftPanel = props => {
     return (
         <div className={clsx('left-panel', !isLPVisible && 'collapssed')}>
             <i className="fas fa-bars left-panel-collapsser" onClick={() => setLPVisible(!isLPVisible)}></i>
+            <h2 className="header">Category</h2>
             <ul>
                 {
                     Object.values(reactos).map(rto =>

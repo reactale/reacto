@@ -48,7 +48,7 @@ const Home = () => {
             <h1 className="mt-5 mb-3">Types of “Reacto”?</h1>
             <section className="mb-5">
                 <p>
-                    Reactos can be classified into various groupes.
+                    Reactos can be classified into various categories.
                 </p>
                 <ul className="row reacto-types">
                     {

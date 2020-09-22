@@ -30,7 +30,7 @@
 			{
 				"name": "((r.dt.month))",
 				"info": "Get current month",
-				"desc": "returns today's date, a number only, e.g. 27",
+				"desc": "returns current month, e.g. February",
 				"examples": [
 					{
 						"name": "Month example",
@@ -41,7 +41,7 @@
 			{
 				"name": "((r.dt.year))",
 				"info": "Get current year",
-				"desc": "returns today's date, a number only, e.g. 27",
+				"desc": "returns current year, e.g. 2018",
 				"examples": [
 					{
 						"name": "Year example",
@@ -52,7 +52,7 @@
 			{
 				"name": "((r.dt.hour))",
 				"info": "Get current hour",
-				"desc": "returns today's date, a number only, e.g. 27",
+				"desc": "returns current hour in 12 hour format, e.g. 9",
 				"examples": [
 					{
 						"name": "Hour example",
@@ -63,7 +63,7 @@
 			{
 				"name": "((r.dt.hour24))",
 				"info": "Get current hour #2",
-				"desc": "returns today's date, a number only, e.g. 27",
+				"desc": "returns current hour in 24 hour format, e.g. 21",
 				"examples": [
 					{
 						"name": "Hour-24 example",
@@ -74,7 +74,7 @@
 			{
 				"name": "((r.dt.min))",
 				"info": "Get current minute",
-				"desc": "returns today's date, a number only, e.g. 27",
+				"desc": "returns current minute, a number only, e.g. 18",
 				"examples": [
 					{
 						"name": "Minute example",
@@ -85,7 +85,7 @@
 			{
 				"name": "((r.dt.sec))",
 				"info": "Get current second",
-				"desc": "returns today's date, a number only, e.g. 27",
+				"desc": "returns current minute, a number only, e.g. 36",
 				"examples": [
 					{
 						"name": "Second example",

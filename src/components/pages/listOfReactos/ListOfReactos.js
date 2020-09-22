@@ -23,7 +23,7 @@ const ListOfReactos = props => {
     }, [])
 
     // Whenever rtoID in url changes
-    useEffect(() => setSelectedId(match.params.id), [match.params.id])
+    useEffect(() => setSelectedId(match.params.id || 'dt'), [match.params.id])
 
     /**
      * When user clicks on any example url of go-to-playground
@@ -58,7 +58,7 @@ const ListOfReactos = props => {
 
             {/* MAIN (MID) SECTION */}
             <div className="mid-panel">
-                <h3 className="theme-color mt-4 text-center">List of Reactos</h3>
+                <h4 className="theme-color my-4 text-center">List of ((r.{selectedId})) Reactos</h4>
                 {   
                     reactos[selectedId] &&
                     reactos[selectedId].reactos.map(rtoDef => 
