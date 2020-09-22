@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from 'react'
+import './playground.css'
 
 const Playground = props => {
     // console.log(props.location.search)
-    const { location } = props
+    const { location, history } = props
     const [rTxt, setRTxt] = useState('')    // Reactive Text
     const [pTxt, setPTxt] = useState('')    // Plain Text
+    const [reactoID, setReactoID] = useState('')  // if was redirected from a Reacto Example
 
     useEffect(() => {
-        console.log(location.search)
         const qparams = new URLSearchParams(location.search)
-        console.log(qparams)
-        const rTxtFromUrl = qparams.get('code')
-        console.log(rTxtFromUrl)
+        const rTxtFromUrl = qparams.get('code') || ""
+        const rtoID = qparams.get('rtoID') || ''
         setRTxt(rTxtFromUrl)
         setPTxt(window.rto.process(rTxtFromUrl))
+        setReactoID(rtoID)
     }, 
     [location.search])
 
@@ -23,11 +24,18 @@ const Playground = props => {
 
     const convertRtoPTxt = () => setPTxt(window.rto.process(rTxt || ''))
 
+    const goBack = () => {
+        let url = '/'
+        if(reactoID) url = `/reactos/${reactoID}`
+        history.push(url)
+    }
+
     // console.log(rTxt)
     return (
-        <div className="px-4">
+        <div className="px-4" className="playground-page">
             <h3 className="theme-color mt-3 text-center">Reacto's Playground</h3>
-                
+            <i className="fas fa-arrow-left back-btn" onClick={goBack}></i>
+
             <label className="my-2">Paste some Reactive Text, i.e. text containing one or more Reacto(s) and click on "Convert" button</label>
 
             <h5 className="mt-4">(Input) Reactive Text</h5>

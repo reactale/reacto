@@ -35,7 +35,7 @@ const ListOfReactos = props => {
 		let url = `${rtoExampleUrl}/${fileUrl}`;
 		axios.get(url)
 		.then(d => {
-			let code = encodeURIComponent(d);
+			let code = encodeURIComponent(d.data);
 			history.push(`/playground?rtoID=${rtoID}&code=${code}`)
 		})
 		.catch(err => {

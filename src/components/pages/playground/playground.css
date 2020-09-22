@@ -1,0 +1,12 @@
+.playground-page {
+    position: relative;
+}
+.playground-page .back-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 18px;
+    color: #d50000;
+    padding: 10px 2px;
+    cursor: pointer;
+}
