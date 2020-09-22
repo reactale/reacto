@@ -1,14 +1,15 @@
-.display-panel .card-header, .display-panel .card-body {
+.info-card .card-header, .info-card .card-body {
     position: relative;
 }
 
-.display-panel .card-header {
+.info-card .card-header {
     font-size: 18px;
     background: #d50000;
     color: #fff;
+    z-index: 9;
 }
 
-.display-panel .card-header .ico {
+.info-card .card-header .ico {
     position: absolute;
     top: 0;
     right: 0;
@@ -25,7 +26,7 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
-.display-panel .copy-reacto-icon {
+.info-card .copy-reacto-icon {
     position: absolute;
     font-size: 22px;
     top: 0;

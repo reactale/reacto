@@ -1,61 +1,40 @@
 import React, { useState } from 'react'
-import { withRouter } from "react-router";
-import { subdir } from '../../services/url.service'
+import clsx from 'clsx'
 import './ReactDefCard.css'
 import { Link } from 'react-router-dom';
 
-const ReactoDefCard = (props) => {
+const ReactoDefCard = props => {
 	const [isVisible, setVisibility] = useState(true)
+	const { rtoDef, goToPlayground, rtoID } = props
 	
-	const goPlayWithData = (ev, fileUrl) => {
-		ev.preventDefault()
-		let url = `/${subdir}/data/reacto-infos/data/${fileUrl}`;
-		fetch(url)
-		.then(res => res.text())
-		.then(d => {
-			let code = encodeURIComponent(d);
-			props.history.push('/playground?code='+code)
-		})
-		.catch(err => {
-			console.log('Error while sending code to playground')
-			console.log(err)
-			props.history.push('/playground')
-		})
-	}
-
-
     return (
-        <div className="card mt-4 display-panel">
+        <div className="card mt-4 info-card">
 		  <div className="card-header" onClick={() => setVisibility(!isVisible)}>
-            {props.rto.info}
-		  	<i className={"fas fa-chevron-up ico " + (isVisible ? '': 'hide') }></i>
-		  	<i className={"fas fa-chevron-down ico " + (isVisible ? 'hide': '') }></i>
+            {rtoDef.info}
+		  	<i className={clsx("fas fa-chevron-up ico", !isVisible && 'hide')}></i>
+		  	<i className={clsx("fas fa-chevron-down ico", isVisible && 'hide') }></i>
 		  </div>
-		  <div className={"card-body " + (isVisible ? '': 'hide')}>
+		  <div className={clsx("card-body", !isVisible && 'hide')}>
 		    <h5 className="card-title font-mono">
-		    	<input type="text" value={props.rto.name} readOnly className="input-in-disguise" />
-		    	<i className="far fa-copy copy-reacto-icon"></i>
+		    	<input type="text" value={rtoDef.name} readOnly className="input-in-disguise" />
+		    	{/* <i className="far fa-copy copy-reacto-icon"></i> */}
 		    </h5>
-            <p className="card-text">{props.rto.desc}</p>
+            <p className="card-text">{rtoDef.desc}</p>
 		    <hr />
 		    <h5>Examples</h5>
 			{
-				props.rto.examples.map( (ex, i) => (
-					<div key={ex.name}>
+				rtoDef.examples.map((ex, i) => (
+					<div key={ex.name} className="mt-15">
 						{(i+1) + '. ' + ex.name + ' | '}
-						<Link to="/playground" onClick={(ev) => goPlayWithData(ev, ex.fileUrl)} className="">Try it out</Link>
+						<Link to="/playground" onClick={() => goToPlayground(rtoID, ex.fileUrl)} className="">Try it out</Link>
 						<i className="fas fa-angle-double-right theme-color ml-1"></i>
 					</div>
 				))
 			}
-		    {/* <div ng-repeat="ex in rto.examples">
-		    	<Link to="/" ng-click="vm.goToPlayground(ex.fileUrl)" className="">Try it out</Link>
-		    	<i className="fas fa-angle-double-right theme-color"></i>
-		    </div> */}
 		    
 		  </div>
 		</div>
     )
 }
 
-export default withRouter(ReactoDefCard)
+export default ReactoDefCard

@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Exo&display=swap');
 
 body {
-    /* color: #d50000; */
     font-family: 'Exo', sans-serif;
     font-size: 16px;
 }
@@ -12,9 +11,11 @@ body {
 a {
   color: #d50000 !important;
 }
-
 .hide {
   display: none !important;
+}
+.mt-15 {
+  margin-top: 15px;
 }
 .theme-color {
   color: #d50000;
@@ -32,6 +33,20 @@ a {
   background: #fff;
   height: 50px;
   align-items: inherit;
+}
+
+.reacto-logo {
+  display: inline-flex;
+    height: 30px;
+    width: 50px;
+    border: 9px double #d50000;
+    border-top: unset;
+    border-bottom: unset;
+    border-radius: 43%;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    color: #d50000;
 }
 
 .main-container {
@@ -125,6 +140,8 @@ a {
 .navbar-brand {
   color: #d50000 !important;
   padding: 0;
+  display: inline-flex;
+  align-items: center;
 }
 .navbar-brand img {
   height: 32px;

@@ -1,13 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
-const Playground = (props) => {
+const Playground = props => {
     // console.log(props.location.search)
-    let rTxtFromUrl = ''
-    const qparams = new URLSearchParams(props.location.search);
-    rTxtFromUrl = qparams.get('code');
+    const { location } = props
+    const [rTxt, setRTxt] = useState('')    // Reactive Text
+    const [pTxt, setPTxt] = useState('')    // Plain Text
 
-    const [rTxt, setRTxt] = useState(rTxtFromUrl || '')
-    const [pTxt, setPTxt] = useState(window.rto.process(rTxtFromUrl || ''))
+    useEffect(() => {
+        console.log(location.search)
+        const qparams = new URLSearchParams(location.search)
+        console.log(qparams)
+        const rTxtFromUrl = qparams.get('code')
+        console.log(rTxtFromUrl)
+        setRTxt(rTxtFromUrl)
+        setPTxt(window.rto.process(rTxtFromUrl))
+    }, 
+    [location.search])
 
     const updateRTxt = (e) => {
         setRTxt(e.target.value)
