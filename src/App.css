@@ -1,9 +1,14 @@
 
 @import url('https://fonts.googleapis.com/css?family=Exo&display=swap');
 
+:root {
+  --washed-red: #f0a3a3;
+}
+
 body {
     font-family: 'Exo', sans-serif;
     font-size: 16px;
+    background: var(--washed-red);
 }
 .font-mono {
 	font-family: "Courier New", Courier, monospace;
@@ -52,6 +57,10 @@ a {
 .main-container {
   margin-top: 75px;
   min-height: 500px;
+}
+.main-container .container {
+  background: #fff;
+  padding: 5px 20px;
 }
 
 .reacto-playgrund-ico {

@@ -13,7 +13,7 @@ const Home = () => {
     }, [])
 
     return (
-        <div className="container">
+        <div className="container shadow-lg rounded">
             <h1 className="mt-4 mb-3">What is a "Reacto"?</h1>
             <section>
                 <p>
