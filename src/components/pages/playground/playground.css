@@ -1,12 +1,15 @@
 .playground-page {
     position: relative;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 4px;
 }
 .playground-page .back-btn {
     position: absolute;
-    top: 0;
+    top: 24px;
     left: 0;
     font-size: 18px;
-    color: #d50000;
-    padding: 10px 2px;
+    color: #f00;
+    padding: 10px 12px;
     cursor: pointer;
 }

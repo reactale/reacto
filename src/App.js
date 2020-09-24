@@ -5,6 +5,7 @@ import './assets/lib/fa-5.10/css/all.min.css'
 import './App.css'
 import Header from './components/partials/header/Header'
 import Routes from './components/common/Routes'
+import Footer from './components/partials/footer/Footer'
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           <Routes />
         </div>
 
-        {/* <Footer /> */}
+        <Footer />
       </Router>
     </div>
   );

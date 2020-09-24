@@ -10,11 +10,20 @@ body {
     font-size: 16px;
     background: var(--washed-red);
 }
+code {
+    color: #fff;
+    word-break: break-word;
+    background: rgba(255, 0, 0, 0.6);
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 92%;
+}
 .font-mono {
 	font-family: "Courier New", Courier, monospace;
 }
 a {
-  color: #d50000 !important;
+  color: #f00 !important;
 }
 .hide {
   display: none !important;
@@ -23,7 +32,7 @@ a {
   margin-top: 15px;
 }
 .theme-color {
-  color: #d50000;
+  color: #f00;
 }
 .border-bottom {
   border-bottom: 1px solid #999;
@@ -44,14 +53,14 @@ a {
   display: inline-flex;
     height: 30px;
     width: 50px;
-    border: 9px double #d50000;
+    border: 9px double #f00;
     border-top: unset;
     border-bottom: unset;
     border-radius: 43%;
     justify-content: center;
     align-items: center;
     font-size: 32px;
-    color: #d50000;
+    color: #f00;
 }
 
 .main-container {
@@ -62,17 +71,20 @@ a {
   background: #fff;
   padding: 5px 20px;
 }
-
+.st-pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  text-align: justify;
+}
 .reacto-playgrund-ico {
   font-size: 70px;
   float: left;
   padding: 5px 10px;
   margin: 7px 20px 10px 0;
-  background: #d50000;
+  background: #f00;
   color: #fff;
-  border: 1px solid #d50000;
+  border: 1px solid #f00;
   border-radius: 9px;
-  opacity: 0.4;
 }
 
 .reacto-types {
@@ -88,40 +100,39 @@ a {
   text-align: center;
   display: block;
   padding: 5px;
-  color: rgba(213, 0, 0, .6) !important;
+  color: #f00;
 }
 
 .reacto-types li .ico {
   font-size: 70px;
   margin-bottom: 10px;
-  opacity: .6;
 }
 
 /*****************************************************
 * Overriding Button and FormControl Styles
 *****************************************************/
 .btn-outline-primary {
-    color: #d50000;
-    border-color: #d50000;
+    color: #f00;
+    border-color: #f00;
 }
 .btn-outline-primary:hover,
 .btn-outline-primary:not(:disabled):not(.disabled).active, 
 .btn-outline-primary:not(:disabled):not(.disabled):active, 
 .show>.btn-outline-primary.dropdown-toggle {
     color: #fff;
-    background-color: #d50000;
-    border-color: #d50000;
+    background-color: #f00;
+    border-color: #f00;
 }
 .btn-outline-primary.focus, 
 .btn-outline-primary:focus,
 .btn-outline-primary:not(:disabled):not(.disabled).active:focus, 
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus, 
 .show>.btn-outline-primary.dropdown-toggle:focus {
-    box-shadow: 0 0 0 0.2rem rgba(213, 0, 0, 0.3);
+    box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.3);
 }
 .form-control:focus {
-  border-color: #d50000 !important;
-  box-shadow: 0 0 0 0.2rem rgba(213, 0, 0, 0.3) !important;
+  border-color: #f00 !important;
+  box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.3) !important;
 }
 /******************************************************************/
 
@@ -144,10 +155,10 @@ a {
 }
 .navbar-nav .nav-link {
   padding: 10px 15px;
-  color: #d50000;
+  color: #f00;
 }
 .navbar-brand {
-  color: #d50000 !important;
+  color: #f00 !important;
   padding: 0;
   display: inline-flex;
   align-items: center;
@@ -157,12 +168,11 @@ a {
   margin: 9px 5px 3px 0;
 }
 .navbar-toggler {
-  border-color: #d50000;
+  border-color: #f00;
   outline: none;
   font-size: 15px;
   padding: 5px 10px;
   height: 30px;
-  margin-top: 9px;
 }
 @media (min-width: 992px) {
   .navbar-nav .nav-item {
@@ -172,11 +182,11 @@ a {
       border-bottom: 1px solid transparent;
   }
   .navbar-nav .nav-link:hover {
-      border-color: rgba(213, 0, 0, 0.3);
+      border-color: rgba(255, 0, 0, 0.3);
   }
   .navbar-nav .nav-link.active,
   .navbar-nav .nav-link.active:hover {
-      border-color: #d50000;
+      border-color: #f00;
   }
 }
 @media (max-width: 991px) {
@@ -190,13 +200,13 @@ a {
       top: 50px;
       left: 0;
       width: 100%;
-      border-top: 7px double #d50000;
-      border-bottom: 7px double #d50000;
+      border-top: 7px double #f00;
+      border-bottom: 7px double #f00;
       background: #fff;   
       padding: 5px 0;
   }
   .bx-navbar-body ul li a {
-      color: #d50000;
+      color: #f00;
   }
   .bx-navbar-body.mobile-nav-hidden {
       left: -1000px;
@@ -210,7 +220,7 @@ a {
       border-radius: 0;
   }
   .navbar-nav .nav-link.active {
-      border-color: #d50000;
+      border-color: #f00;
   }
 }
 /******** NAV STYLE STARTS HERE *********************/

@@ -46,7 +46,7 @@ const ListOfReactos = props => {
 	}
 
     return (
-        <div className="listpage">
+        <div className="listpage shadow-lg">
 
             {/* LEFT PANEL */}
             <LeftPanel 

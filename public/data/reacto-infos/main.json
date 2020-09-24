@@ -1,5 +1,5 @@
-[
-	{
+{
+	"dt": {
 		"id": "dt",
 		"name": "Date / Time Reacto",
 		"iconClass": "far fa-clock",
@@ -8,7 +8,7 @@
 			{
 				"name": "((r.dt.date))",
 				"info": "Get current date",
-				"desc": "returns today's date, a number only, e.g. 27",
+				"desc": "yields today's date, a number only, e.g. 27",
 				"examples": [
 					{
 						"name": "Date example",
@@ -19,7 +19,7 @@
 			{
 				"name": "((r.dt.day))",
 				"info": "Get current day",
-				"desc": "returns current day's name in the week, e.g. Sunday",
+				"desc": "yields current day's name in the week, e.g. Sunday",
 				"examples": [
 					{
 						"name": "Day example",
@@ -30,7 +30,7 @@
 			{
 				"name": "((r.dt.month))",
 				"info": "Get current month",
-				"desc": "returns today's date, a number only, e.g. 27",
+				"desc": "yields current month, e.g. February",
 				"examples": [
 					{
 						"name": "Month example",
@@ -41,7 +41,7 @@
 			{
 				"name": "((r.dt.year))",
 				"info": "Get current year",
-				"desc": "returns today's date, a number only, e.g. 27",
+				"desc": "yields current year, e.g. 2018",
 				"examples": [
 					{
 						"name": "Year example",
@@ -52,7 +52,7 @@
 			{
 				"name": "((r.dt.hour))",
 				"info": "Get current hour",
-				"desc": "returns today's date, a number only, e.g. 27",
+				"desc": "yields current hour in 12 hour format, e.g. 9",
 				"examples": [
 					{
 						"name": "Hour example",
@@ -63,7 +63,7 @@
 			{
 				"name": "((r.dt.hour24))",
 				"info": "Get current hour #2",
-				"desc": "returns today's date, a number only, e.g. 27",
+				"desc": "yields current hour in 24 hour format, e.g. 21",
 				"examples": [
 					{
 						"name": "Hour-24 example",
@@ -74,7 +74,7 @@
 			{
 				"name": "((r.dt.min))",
 				"info": "Get current minute",
-				"desc": "returns today's date, a number only, e.g. 27",
+				"desc": "yields current minute, a number only, e.g. 18",
 				"examples": [
 					{
 						"name": "Minute example",
@@ -85,7 +85,7 @@
 			{
 				"name": "((r.dt.sec))",
 				"info": "Get current second",
-				"desc": "returns today's date, a number only, e.g. 27",
+				"desc": "yields current minute, a number only, e.g. 36",
 				"examples": [
 					{
 						"name": "Second example",
@@ -95,7 +95,7 @@
 			}
 		]
 	},
-	{
+	"cfg": {
 		"id": "cfg",
 		"name": "Config Reacto",
 		"iconClass": "fas fa-sitemap",
@@ -114,7 +114,7 @@
 			}
 		]
 	},
-	{	
+	"var": {	
 		"id": "var",
 		"name": "Variable Reacto",
 		"iconClass": "fas fa-square-root-alt",
@@ -138,7 +138,7 @@
 			{
 				"name": "((r.var.variableName))",
 				"info": "Get a variable",
-				"desc": "returns the value of the variable that was set earlier, either by user or system",
+				"desc": "yields the value of the variable that was set earlier, either by user or system",
 				"examples": [
 					{
 						"name": "Getting Variable",
@@ -148,7 +148,7 @@
 			}
 		]
 	},
-	{
+	"calc": {
 		"id": "calc",
 		"name": "Calc Reacto",
 		"iconClass": "fas fa-calculator",
@@ -167,7 +167,7 @@
 			}
 		]
 	},
-	{
+	"if": {
 		"id": "if",
 		"name": "Conditional (If) Reacto",
 		"iconClass": "fas fa-sitemap",
@@ -254,7 +254,7 @@
 			}
 		]
 	},
-	{
+	"fn": {
 		"id": "fn",
 		"name": "Funtional Reacto",
 		"iconClass": "fas fa-code",
@@ -280,5 +280,4 @@
 			}
 		]
 	}
-
-]
+}
