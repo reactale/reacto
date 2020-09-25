@@ -1,0 +1,16 @@
+((r.calc. 4 + 5))   // Should yield 9
+\
+((r.calc. 70 - 30)) // Should yield 40
+\
+((r.calc. 3 * 9))   // Should yield 27
+\
+((r.calc. 80 / 10)) // Should yield 8
+
+
+((r.var._1))    // Should yield 8
+\
+((r.var._2))    // Should yield 27
+\
+((r.var._3))    // Should yield 40
+\
+((r.var._4))    // Should yield 9

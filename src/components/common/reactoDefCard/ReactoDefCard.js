@@ -22,7 +22,6 @@ const ReactoDefCard = props => {
 					{/* <i className="far fa-copy copy-reacto-icon"></i> */}
 				</h5>
 				<p className="card-text">{rtoDef.desc}</p>
-
 				{
 					rtoDef.examples.length > 0 && 
 					<>

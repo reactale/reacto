@@ -98,7 +98,7 @@
 	"cfg": {
 		"id": "cfg",
 		"name": "Config Reacto",
-		"iconClass": "fas fa-sitemap",
+		"iconClass": "fas fa-sliders-h",
 		"desc": "These reactos help us change various configurations to control the behaviours of other reactos",
 		"reactos": [
 			{
@@ -117,7 +117,7 @@
 	"var": {	
 		"id": "var",
 		"name": "Variable Reacto",
-		"iconClass": "fas fa-square-root-alt",
+		"iconClass": "fas fa-shopping-basket",
 		"desc": "With these reactos we can store whatever data we want to which might help us create Reactive Texts",
 		"reactos": [
 			{
@@ -143,6 +143,17 @@
 					{
 						"name": "Getting Variable",
 						"fileUrl": "var/get/ex1.txt"
+					}
+				]
+			},
+			{
+				"name": "((r.var._n))",
+				"info": "Get nth calc result",
+				"desc": "yields the last nth result yielded by calc reacto ((r.calc))",
+				"examples": [
+					{
+						"name": "Getting Results of all Calc Reactos",
+						"fileUrl": "var/calc-result/ex1.txt"
 					}
 				]
 			}
