@@ -268,7 +268,7 @@
 			},
 			{
 				"name": "((r.fn.goBack __ n))",
-				"info": "Roll up n number of storylets",
+				"info": "Roll up n storylets",
 				"desc": "Here n is the number of storylets upward. Mind the double underscore '__' as the separator. Only available on Reactale.com",
 				"examples": []
 			},

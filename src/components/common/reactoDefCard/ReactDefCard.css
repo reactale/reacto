@@ -34,3 +34,9 @@
     padding: 20px 20px;
     cursor: pointer;
 }
+
+.info-card .card-body {
+    border: 1px solid #f00;
+    border-top: unset;
+    border-bottom: unset;
+}

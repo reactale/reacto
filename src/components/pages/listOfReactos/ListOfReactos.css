@@ -67,13 +67,17 @@
 
 .listpage .info-card {
 	margin-top: 0 !important;
-	border: 2px solid #f00;
 	border-radius: 0;
+	border: unset;
 }
 .listpage .info-card .card-header {
 	position: sticky;
 	top: 50px;
 	border-radius: 0;
+}
+
+.listpage .info-card:last-child .card-body {
+	border-bottom: 1px solid #f00;
 }
 
 @media(max-width: 767px) {

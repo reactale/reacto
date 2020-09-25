@@ -32,7 +32,7 @@ const Home = () => {
                 </p>
 
                 <div class="d-flex flex-row-reverse">
-                    <Link to="/reactos/dt" type="button" class="btn btn-outline-primary d-flex align-items-center">
+                    <Link to="/reactos/dt" type="button" class="btn btn-primary d-flex align-items-center">
                         Explore Reacto(s)
                         <i class="fas fa-angle-double-right ml-2"></i>
                     </Link>

@@ -66,6 +66,7 @@ a {
 .main-container {
   margin-top: 75px;
   min-height: 500px;
+  min-height: 85vh;
 }
 .main-container .container {
   background: #fff;
@@ -101,6 +102,15 @@ a {
   display: block;
   padding: 5px;
   color: #f00;
+  text-decoration: none !important;
+}
+.reacto-types li .inner-container:hover,
+.reacto-types li .inner-container:focus,
+.reacto-types li .inner-container:active {
+  border: 8px double #f00;
+  border-top: unset;
+  border-bottom: unset;
+  border-radius: 36px;
 }
 
 .reacto-types li .ico {
@@ -115,11 +125,16 @@ a {
     color: #f00;
     border-color: #f00;
 }
+.btn-primary {
+  color: #fff !important;
+  background-color: #f00;
+  border-color: #f00;
+}
 .btn-outline-primary:hover,
 .btn-outline-primary:not(:disabled):not(.disabled).active, 
 .btn-outline-primary:not(:disabled):not(.disabled):active, 
 .show>.btn-outline-primary.dropdown-toggle {
-    color: #fff;
+    color: #fff !important;
     background-color: #f00;
     border-color: #f00;
 }
@@ -128,6 +143,21 @@ a {
 .btn-outline-primary:not(:disabled):not(.disabled).active:focus, 
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus, 
 .show>.btn-outline-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.3);
+}
+.btn-primary:hover,
+.btn-primary:not(:disabled):not(.disabled).active, 
+.btn-primary:not(:disabled):not(.disabled):active, 
+.show>.btn-primary.dropdown-toggle {
+    color: #fff !important;
+    background-color: rgb(198, 0, 0);
+    border-color:  rgb(198, 0, 0);
+}
+.btn-primary.focus, 
+.btn-primary:focus,
+.btn-primary:not(:disabled):not(.disabled).active:focus, 
+.btn-primary:not(:disabled):not(.disabled):active:focus, 
+.show>.btn-primary.dropdown-toggle:focus {
     box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.3);
 }
 .form-control:focus {

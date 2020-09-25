@@ -61,12 +61,13 @@ const ListOfReactos = props => {
                 <h4 className="theme-color my-4 text-center">List of ((r.{selectedId})) Reactos</h4>
                 {   
                     reactos[selectedId] &&
-                    reactos[selectedId].reactos.map(rtoDef => 
+                    reactos[selectedId].reactos.map((rtoDef, i) => 
                         <ReactoDefCard 
                             rtoDef={rtoDef} 
                             key={rtoDef.desc} 
                             rtoID={reactos[selectedId].id}
                             goToPlayground={goToPlayground}
+                            isOpen={i===0}
                         />
                     )
                 }
