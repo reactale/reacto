@@ -11,9 +11,9 @@ function App() {
   return (
     <div className="App">
       <Router basename="">
-        <Header />
+        {/* <Header /> */}
 
-        <div className="container-fluid main-container">
+        <div className="main-container">
           <Routes />
         </div>
 

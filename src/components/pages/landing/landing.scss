@@ -1,0 +1,50 @@
+@import '../../../vars';
+#landing-page {
+    .banner {
+        height: 300px;
+        background: $theme-primary;
+        padding-top: 150px;
+
+        .playground-demo {
+            padding: 0;
+
+            .half {
+                min-height: 300px;
+                background: #000;
+                position: relative;
+                position: relative;
+                border-radius: 4px;
+                overflow: hidden;
+                border: .5px solid $theme-primary;
+
+                .header {
+                    background-color: #212529;
+                    color: #fff;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    padding: 5px 15px;
+                    font-size: 15px;
+                }
+
+                .body {
+                    padding: 40px 15px 15px;
+                    color: rgba(255, 255, 255, .9);
+                    font-family: 'Courier New', monospace;
+
+                    .reacto-hlight {
+                        color: #fff;
+                        background: red;
+                        padding: 1px 5px;
+                        font-weight: bold;
+                        font-family: 'Courier New', monospace;
+
+                    }
+                }
+            }
+
+            
+        }
+    }
+}
