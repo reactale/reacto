@@ -1,5 +1,10 @@
 @import url(//fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap);
+@import url(//fonts.googleapis.com/icon?family=Material+Icons);
+@import url(//fonts.googleapis.com/css?family=Exo&display=swap);
 
+:root {
+    --theme-color: #d50000;
+}
 *,
 *::before,
 *::after {
@@ -8,13 +13,30 @@
     margin: 0;
 }
 body {
+    font-family: 'Exo', sans-serif;
     font-size: 16px;
+    color: rgba(0, 0, 0, .8);
 }
-
+.reacto-logo {
+    display: inline-flex;
+    height: 30px;
+    width: 50px;
+    border: 9px double var(--theme-color);
+    border-top: unset;
+    border-bottom: unset;
+    border-radius: 43%;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    color: var(--theme-color);
+}
 
 .mt-5 {
     margin-top: 15px !important;
 }
 .mt-15 {
     margin-top: 15px !important;
+}
+.ml-10 {
+    margin-left: 10px !important;
 }
