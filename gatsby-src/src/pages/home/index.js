@@ -1,11 +1,26 @@
 import React from 'react'
+import { makeStyles } from '@material-ui/core/styles'
 
-const home = props => {
+const useStyles = makeStyles({
+    home: {
+      
+    },
+    topBanner: {
+        background: '#d50000'
+    }
+})
+
+const Home = props => {
+    const classes = useStyles()
     return (
-        <div>
-            Welcome to Home Page
+        <div className={classes.home}>
+            
+            <div className={classes.topBanner}>
+                
+            </div>
+
         </div>
     )
 }
 
-export default home
+export default Home
