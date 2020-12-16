@@ -1,10 +1,12 @@
 import React from 'react'
 // import { Helmet } from 'react-helmet'
+import clsx from 'clsx'
 import { Link } from "gatsby"
 import { makeStyles, Container, Grid, Box } from '@material-ui/core'
 import ChangeHistoryIcon from '@material-ui/icons/ChangeHistory'
 import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank'
 import RadioButtonUncheckedIcon from '@material-ui/icons/RadioButtonUnchecked'
+// import GridOnIcon from '@material-ui/icons/GridOn'
 
 const useStyles = makeStyles({
     home: {
@@ -19,7 +21,7 @@ const useStyles = makeStyles({
             top: 0,
             left: 0,
             right: 0,
-            height: '72%',
+            height: '75%',
             background: 'var(--theme-color)',
             zIndex: -1
         }
@@ -28,6 +30,7 @@ const useStyles = makeStyles({
         padding: "30px 0",
         textAlign: 'center',
         color: '#fff',
+        userSelect: 'none !important',
         '& .logolink': {
             textDecoration: 'none',
             color: '#fff',
@@ -43,6 +46,56 @@ const useStyles = makeStyles({
         '& .subtext': {
             fontSize: 23,
             marginTop: 7
+        },
+        '& .shortcuts': {
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginTop: 25,
+
+            '& .fico': {
+                background: '#f44336',
+                borderRadius: 4,
+                color: '#fff',
+                fontSize: 30,
+                display: 'inline-flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                height: 50,
+                width: 50,
+                marginBottom: 7,
+                boxShadow: '-2px -2px 5px 0px #4a3e3e'
+            },
+
+            '& .icolink': {
+                // display: 'inline-block'
+                display: 'inline-flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: 90,
+                color: '#fff',
+                textDecoration: 'none'
+            },
+
+            '& .icolink:hover': {
+                transform: 'scale(1.2)'
+            },
+
+            '& .cheatsheet': {
+                width: 48,
+                height: 48,
+                marginTop: 5,
+                color: '#ddd'
+            },
+
+            '& .list': {
+                // marginLeft: 10
+            },
+
+            '& .terminal': {
+                // marginLeft: 15
+            }
         }
     },
     staticPlayground: {
@@ -85,6 +138,7 @@ const useStyles = makeStyles({
             '& .body': {
                 padding: '40px 15px 25px 15px',
                 color: 'rgba(255, 255, 255, .9)',
+                lineHeight: '20px',
 
                 '& .reacto-hlight': {
                     color: '#fff',
@@ -99,11 +153,11 @@ const useStyles = makeStyles({
     },
     simpleSec: {
         '& .header': {
-            // color: 'rgba(0, 0, 0, .6)'
+            textAlign: 'center'
         },
         '& .para': {
-            fontSize: 22,
-            color: 'rgba(0, 0, 0, .7)'
+            color: 'rgba(0, 0, 0, .6)',
+            textAlign: 'justify'
         }
     }
 })
@@ -114,14 +168,32 @@ const Home = props => {
         <div className={classes.home}>
 
             {/* THE BANNER */}
-            <div className={classes.topBanner}>
+            <div className={clsx(classes.topBanner, 'home-banner')}>
                 <div className="redwall"></div>
                 <div className={classes.logoSec}>
                     <Link to="/" className="logolink">
                         <span className="reacto-logo">r</span>
                         <span className="ml-10">reacto</span>
                     </Link>
-                    <p className="subtext">Makes Text Dynamic</p>
+                    <p className="subtext">Makes Texts Reactive</p>
+                    <div className="shortcuts">
+                        {/* <Link to="" className="icolink">
+                            <GridOnIcon className="cheatsheet" />
+                            <span>cheatsheet</span>
+                        </Link> */}
+                        <Link to="" className="icolink">
+                        <i class="fas fa-receipt fico"></i>
+                            <span>cheatsheet</span>
+                        </Link>
+                        <Link to="" className="icolink">
+                            <i className="fas fa-list-ul fico list"></i>
+                            <span>reactos</span>
+                        </Link>
+                        <Link to="" className="icolink">
+                            <i className="fas fa-terminal fico terminal"></i>
+                            <span>playground</span>
+                        </Link>
+                    </div>
                 </div>
 
 
@@ -192,8 +264,19 @@ const Home = props => {
                 {/* SECTION */}
                 <Box mt={5} className={classes.simpleSec}>
                     <h1 className="header">What is a REACTO</h1>
-                    <p className="para mt-5">
-                        A "reacto" is a small token / piece of code that can be embedded into any text to give it the power to update itself dynamically. Thus "reacto" turn a <i>normal</i> text into a <i>dynamic</i> text or a <i>reactive</i> text.
+                    <p className="para mt-5 responsive-text">
+                        A "reacto" is a small token / piece of code that can be embedded into any text to give it the power to update itself dynamically. Thus a "reacto" turns a <i>normal</i> text into a <i>dynamic</i> text or a <i>reactive</i> text.
+                    </p>
+                    <p className="para mt-5 responsive-text">
+                        Reacto is being developed as a sub-project of <a href="https://reactale.com" target="_blank" rel="noreferrer noopener">Reactale</a> by <a href="https://barick.in/" target="_blank" rel="noreferrer noopener">Suman Barick</a>. The term "reacto" was made as a short from "reactive token".
+                    </p>
+                </Box>
+
+                {/* SECTION */}
+                <Box mt={5} className={classes.simpleSec}>
+                    <h1 className="header">Tips-Tricks-HowTos</h1>
+                    <p className="para mt-5 responsive-text">
+                        
                     </p>
                 </Box>
 
