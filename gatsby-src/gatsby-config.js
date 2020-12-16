@@ -6,5 +6,13 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: 'gatsby-plugin-load-script',
+      options: {
+        src: 'rto.all.min.js', // Change to the script filename
+      },
+    },
+  ],
+  
 }
