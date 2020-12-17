@@ -13,6 +13,14 @@ module.exports = {
         src: 'rto.all.min.js', // Change to the script filename
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/markdown-pages`,
+      },
+    },
+    `gatsby-transformer-remark`,
   ],
   
 }

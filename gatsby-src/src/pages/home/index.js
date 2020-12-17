@@ -178,19 +178,15 @@ const Home = props => {
                     </Link>
                     <p className="subtext">Makes Texts Reactive</p>
                     <div className="shortcuts">
-                        {/* <Link to="" className="icolink">
-                            <GridOnIcon className="cheatsheet" />
-                            <span>cheatsheet</span>
-                        </Link> */}
-                        <Link to="" className="icolink">
+                        <Link to="/cheatsheet" className="icolink">
                         <i class="fas fa-receipt fico"></i>
                             <span>cheatsheet</span>
                         </Link>
-                        <Link to="" className="icolink">
+                        <Link to="/reactos" className="icolink">
                             <i className="fas fa-list-ul fico list"></i>
                             <span>reactos</span>
                         </Link>
-                        <Link to="" className="icolink">
+                        <Link to="/playground" className="icolink">
                             <i className="fas fa-terminal fico terminal"></i>
                             <span>playground</span>
                         </Link>
@@ -285,13 +281,13 @@ const Home = props => {
                         There are various to get started with reactos,
                         <ul className="mt-5 ulist">
                             <li className="mt-5">
-                                <Link to="">Official Docs</Link> - Everything on all the reactos available e.g definitions, examples, use-cases etc.
+                                <Link to="/reactos">Official Docs</Link> - Everything on all the reactos available e.g definitions, examples, use-cases etc.
                             </li>
                             <li className="mt-5">
-                                <Link to="">The CheatSheet</Link> - One page that sums up everything, for a quick lookup or later reference.
+                                <Link to="cheatsheet">The CheatSheet</Link> - One page that sums up everything, for a quick lookup or later reference.
                             </li>
                             <li className="mt-5">
-                                <Link to="">The Playground</Link> - Try the examples given or write something of your own, it's a playground.
+                                <Link to="playground">The Playground</Link> - Try the examples given or write something of your own, it's a playground.
                             </li>
                         </ul>
                     </p>
