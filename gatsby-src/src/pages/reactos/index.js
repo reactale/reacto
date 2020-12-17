@@ -5,7 +5,7 @@ import { Container, Box } from '@material-ui/core'
 
 const Reactos = props => {
     return (
-        <Layout>
+        <Layout title="Documentation">
             <Container maxWidth="md">
                 <Box
                     mb={8}

@@ -6,11 +6,11 @@ const styles = {
 }
 
 const Layout = props => {
-    const { children } = props
+    const { children, title } = props
 
     return (
         <div>
-            <Header />
+            <Header title={title} />
             <div style={styles}>
                 {children}
             </div>

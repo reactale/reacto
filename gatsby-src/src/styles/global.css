@@ -73,6 +73,31 @@ a {
 /**************************************************************/
 
 /**************************************************************
+* CUSTOM SCROLLBAR
+**************************************************************/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--theme-color); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, .5); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, .7); 
+    cursor: default;
+  }
+/**************************************************************/
+
+/**************************************************************
 * MEDIA QUERIES
 **************************************************************/
 @media (max-width: 768px) {

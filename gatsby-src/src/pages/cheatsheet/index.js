@@ -6,7 +6,7 @@ import { Container, Box } from '@material-ui/core'
 const Cheatsheet = props => {
     const { data } = props
     return (
-        <Layout>
+        <Layout title="CheatSheet">
             <Container maxWidth="md">
                 <Box
                     mb={8}

@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useRef } from 'react'
 // import { Link } from "gatsby"
 import { Layout } from '../../components/common'
-import { Container, Grid, Box, makeStyles, Button } from '@material-ui/core'
+import { Container, Grid, Box, makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles({
     editor: {
@@ -9,6 +9,33 @@ const useStyles = makeStyles({
         marginTop: 25,
         borderRadius: 4,
         overflow: 'hidden',
+
+        '& .header': {
+            background: '#212529',
+            color: '#fff',
+            padding: '5px 15px',
+            position: 'relative',
+
+            '& .convertbtn': {
+                position: 'absolute',
+                top: '3px',
+                right: '3px',
+                padding: '5px 15px',
+                background: 'var(--theme-color)',
+                border: 'none',
+                color: '#fff',
+                userSelect: 'none',
+                cursor: 'default',
+                outline: 'none',
+                borderRadius: '2px',
+
+                '&:active': {
+                    transform: 'scale(.98)',
+                    transformOrigin: 'center right'
+                }
+            }
+        },
+
         '& .writearea': {
             resize: 'vertical',
             width: '100%',
@@ -26,22 +53,29 @@ const useStyles = makeStyles({
             minHeight: 'calc(45vh + 6px)',
             background: '#000',
             color: 'rgba(255, 255, 255, .8)',
-            padding: 15
+            padding: 15,
+            whiteSpace: 'pre',
+            overflow: 'auto'
         },
 
-        '& .header': {
-            background: '#212529',
-            color: '#fff',
-            padding: '5px 15px',
-        }
+        
     }
 })
 
 const Playground = props => {
     const classes = useStyles()
+    const inRef = useRef()
+    const outRef = useRef()
+
+    const convert = () => {
+        let rTxt = inRef.current.value
+        if(!rTxt) return
+        rTxt = window.rto.process(rTxt)
+        outRef.current.innerHTML = rTxt
+    }
 
     return (
-        <Layout>
+        <Layout title="Playground">
             <Container maxWidth="lg">
                 <Box
                     mb={8}
@@ -53,16 +87,16 @@ const Playground = props => {
                         <div className={classes.editor}>
                             <div className="header">
                                 Reactive Text
-                                <Button 
-                                    variant="contained" 
-                                    color="secondary" 
-                                    className="playbtn"
-                                    size="small"
+                                <button 
+                                    type="button"
+                                    className="convertbtn" 
+                                    onClick={convert}
                                 >
-                                    <i class="fas fa-play"></i>&nbsp;Convert
-                                </Button>
+                                    <i className="fas fa-play"></i>&nbsp;Convert
+                                </button>
                             </div>
                             <textarea 
+                                ref={inRef}
                                 className="writearea"
                                 spellcheck="false"
                                 placeholder="Write reactive text (text + reacto) here ..."
@@ -74,7 +108,7 @@ const Playground = props => {
                     <Grid item xs={12} md={6}>
                         <div className={classes.editor}>
                             <div className="header">Converted Text</div>
-                            <div className="output">Converted text will appear here ...</div>
+                            <div ref={outRef} className="output">Converted text will appear here ...</div>
                         </div>
                     </Grid>
                 </Grid>
