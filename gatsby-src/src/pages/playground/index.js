@@ -1,7 +1,7 @@
 import React from 'react'
 // import { Link } from "gatsby"
 import { Layout } from '../../components/common'
-import { Container, Grid, Box, makeStyles } from '@material-ui/core'
+import { Container, Grid, Box, makeStyles, Button } from '@material-ui/core'
 
 const useStyles = makeStyles({
     editor: {
@@ -51,7 +51,17 @@ const Playground = props => {
                 <Grid container spacing={1}>
                     <Grid item xs={12} md={6}>
                         <div className={classes.editor}>
-                            <div className="header">Reactive Text</div>
+                            <div className="header">
+                                Reactive Text
+                                <Button 
+                                    variant="contained" 
+                                    color="secondary" 
+                                    className="playbtn"
+                                    size="small"
+                                >
+                                    <i class="fas fa-play"></i>&nbsp;Convert
+                                </Button>
+                            </div>
                             <textarea 
                                 className="writearea"
                                 spellcheck="false"
