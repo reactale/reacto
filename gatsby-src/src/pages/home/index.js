@@ -7,6 +7,7 @@ import ChangeHistoryIcon from '@material-ui/icons/ChangeHistory'
 import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank'
 import RadioButtonUncheckedIcon from '@material-ui/icons/RadioButtonUnchecked'
 // import GridOnIcon from '@material-ui/icons/GridOn'
+import { Footer } from '../../components/common'
 
 const useStyles = makeStyles({
     home: {
@@ -265,22 +266,51 @@ const Home = props => {
                 <Box mt={5} className={classes.simpleSec}>
                     <h1 className="header">What is a REACTO</h1>
                     <p className="para mt-5 responsive-text">
-                        A "reacto" is a small token / piece of code that can be embedded into any text to give it the power to update itself dynamically. Thus a "reacto" turns a <i>normal</i> text into a <i>dynamic</i> text or a <i>reactive</i> text.
-                    </p>
-                    <p className="para mt-5 responsive-text">
-                        Reacto is being developed as a sub-project of <a href="https://reactale.com" target="_blank" rel="noreferrer noopener">Reactale</a> by <a href="https://barick.in/" target="_blank" rel="noreferrer noopener">Suman Barick</a>. The term "reacto" was made as a short from "reactive token".
+                        A "reacto" is a small token / piece of code that can be embedded into any text to give it the power to update itself dynamically. Thus a "reacto" turns a <i>normal</i> text into a <i>dynamic</i> text or a <i>reactive</i> text. The term "reacto" was made as a 'short' from "reactive token".
                     </p>
                 </Box>
 
                 {/* SECTION */}
                 <Box mt={5} className={classes.simpleSec}>
-                    <h1 className="header">Tips-Tricks-HowTos</h1>
+                    <h1 className="header">Where to Use</h1>
                     <p className="para mt-5 responsive-text">
-                        
+                        Reactos can be used while writing stories / tales in the new-age dynamic story writing platform <a href="https://reactale.com" target="_blank" rel="noreferrer noopener">Reactale</a> to give your tales reactive abilities and come to life.
+                    </p>
+                </Box>
+
+                {/* SECTION */}
+                <Box mt={5} className={classes.simpleSec}>
+                    <h1 className="header">How to Use</h1>
+                    <p className="para mt-5 responsive-text">
+                        There are various to get started with reactos,
+                        <ul className="mt-5 ulist">
+                            <li className="mt-5">
+                                <Link to="">Official Docs</Link> - Everything on all the reactos available e.g definitions, examples, use-cases etc.
+                            </li>
+                            <li className="mt-5">
+                                <Link to="">The CheatSheet</Link> - One page that sums up everything, for a quick lookup or later reference.
+                            </li>
+                            <li className="mt-5">
+                                <Link to="">The Playground</Link> - Try the examples given or write something of your own, it's a playground.
+                            </li>
+                        </ul>
+                    </p>
+                </Box>
+
+                {/* SECTION */}
+                <Box mt={6} className={classes.simpleSec}>
+                    <h1 className="header">Whom to <s>Thank</s> Blame</h1>
+                    <p className="para mt-5 responsive-text">
+                        Reacto was created and is being developed as a sub-project of <a href="https://reactale.com" target="_blank" rel="noreferrer noopener">Reactale</a> by <a href="https://barick.in/" target="_blank" rel="noreferrer noopener">Suman Barick</a>.
                     </p>
                 </Box>
 
             </Container>
+            
+            <Box mt={8}>
+                <Footer />                
+            </Box>
+            
         </div>
     )
 }
