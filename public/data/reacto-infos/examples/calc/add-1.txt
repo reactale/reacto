@@ -1,7 +1,0 @@
-((r.var.n1 = 1))
-((r.var.n2 = 2))
-
-((r.calc. r.var.n1 + r.var.n2))
-((r.calc. r.var.n1 + 8))
-((r.calc. 16 + r.var.n2))
-((r.calc. 20 + 30))

@@ -1,1 +1,1 @@
-serve -s ./build
+serve -s ./gatsby-src/public
