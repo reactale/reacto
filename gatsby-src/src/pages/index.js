@@ -167,10 +167,20 @@ const Home = props => {
     const classes = useStyles()
     const [processedTxt, setProcessedTxt] = useState({})
     useEffect(() => {
-        const procsdTxt = {}
-        procsdTxt.yearDiff = window.rto.process(`((r.calc. r.dt.year - 2019))`)
-        procsdTxt.monthDate = window.rto.process(`((r.dt.month)) ((r.dt.date))`)
-        setProcessedTxt(procsdTxt)
+
+        const processRto = () => {
+            if(window.rto) {
+                const procsdTxt = {}
+                procsdTxt.yearDiff = window.rto.process(`((r.calc. r.dt.year - 2019))`)
+                procsdTxt.monthDate = window.rto.process(`((r.dt.month)) ((r.dt.date))`)
+                setProcessedTxt(procsdTxt)
+            }
+            else {
+                setTimeout(processRto, 500)
+            }
+        }
+        
+        processRto()
 
     }, [])
     return (

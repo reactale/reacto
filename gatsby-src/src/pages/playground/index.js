@@ -137,7 +137,7 @@ const Playground = props => {
                             <textarea 
                                 ref={inRef}
                                 className="writearea"
-                                spellcheck="false"
+                                spellCheck="false"
                                 placeholder="Write reactive text (text + reacto) here ..."
                             ></textarea>
                         </div>
