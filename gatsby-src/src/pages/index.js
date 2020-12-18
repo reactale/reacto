@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 // import { Helmet } from 'react-helmet'
 import clsx from 'clsx'
 import { Link } from "gatsby"
@@ -165,6 +165,14 @@ const useStyles = makeStyles({
 
 const Home = props => {
     const classes = useStyles()
+    const [processedTxt, setProcessedTxt] = useState({})
+    useEffect(() => {
+        const procsdTxt = {}
+        procsdTxt.yearDiff = window.rto.process(`((r.calc. r.dt.year - 2019))`)
+        procsdTxt.monthDate = window.rto.process(`((r.dt.month)) ((r.dt.date))`)
+        setProcessedTxt(procsdTxt)
+
+    }, [])
     return (
         <div className={classes.home}>
 
@@ -242,12 +250,12 @@ const Home = props => {
                                         Dear reader,
                                         <br />
                                         <br />
-                                        ... I have seen the future. And I know you will read this letter exactly <span className="reacto-hlight">{window.rto.process(`((r.calc. r.dt.year - 2019))`)}</span> years from now, same month, same day ...
+                                        ... I have seen the future. And I know you will read this letter exactly <span className="reacto-hlight">{processedTxt.yearDiff}</span> years from now, same month, same day ...
                                         <br />
                                     </p>
                                     <p className="mt-5">
                                         - Mr. Barick <br />
-                                        <span className="reacto-hlight">{window.rto.process(`((r.dt.month)) ((r.dt.date))`)}</span>, 2019
+                                        <span className="reacto-hlight">{processedTxt.monthDate}</span>, 2019
                                     </p>
                                 </div>
                             </Box>

@@ -1,1 +1,0 @@
-Current minute is ((r.dt.min))

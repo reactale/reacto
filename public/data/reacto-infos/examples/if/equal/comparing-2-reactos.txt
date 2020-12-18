@@ -1,5 +1,0 @@
-((r.var.num1 = 36)) ((r.var.num2 = 77)) ((r.var.num3 = 36))
-
-((r.if. r.var.num1 = r.var.num2)) {{ num1 and num2 are equal }}
-((r.if. r.var.num2 = r.var.num3)) {{ num2 and num3 are equal }}
-((r.if. r.var.num1 = r.var.num3)) {{ num1 and num3 are equal }}

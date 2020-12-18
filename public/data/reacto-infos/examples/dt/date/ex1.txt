@@ -1,5 +1,0 @@
-Today's date is ((r.dt.date))
-
-Today is ((r.dt.date))th day of this month
-
-If you lucky number is ((r.dt.date)), then today is your day :)

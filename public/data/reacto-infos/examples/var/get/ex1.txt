@@ -1,5 +1,0 @@
-Getting variable is easy. Any previously set variable, like ((r.var.myNumber=9))
-
-can be retrived, just by its name.
-
-Like the number we set earlier is ((r.var.myNumber))

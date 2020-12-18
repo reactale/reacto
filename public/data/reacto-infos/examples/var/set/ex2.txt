@@ -1,8 +1,0 @@
-set multiline variables, like this, 
-((r.var.aboutReacto = Reacto lets you do some real powerful and cool stuff
-Reacto was made short from "Reactive Token"
-Reacto is singular, in plural it will be Reactos
-))
-
-And some words about reacto are =>
-((r.var.aboutReacto))

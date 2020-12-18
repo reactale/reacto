@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from "gatsby"
-import { makeStyles } from '@material-ui/core'
+import { makeStyles, Menu, MenuItem } from '@material-ui/core'
 
 const useStyles = makeStyles({
     root: {
@@ -25,23 +25,41 @@ const useStyles = makeStyles({
             flex: 1,
             fontSize: 27
         },
-        '& .menuBtn': {
-            color: '#fff',
-            padding: '7px 15px',
-            cursor: 'default',
-            fontSize: 27,
-            '&:hover': {
-                color: 'rgba(255, 255, 255, .8)'
-            },
-            '&:active': {
-                transform: 'scale(.9)'
+        '& .menubtn': {
+            background: 'transparent',
+            border: 'none',
+            outline: 'none',
+            '& .ico': {
+                color: '#fff',
+                padding: '7px 15px',
+                cursor: 'default',
+                fontSize: 27,
             }
         }
     }
 })
+
+const menu = [
+    { title: "Home", link: "/" },
+    { title: "Documentation", link: "/reactos" },
+    { title: "CheatSheet", link: "/cheatsheet" },
+    { title: "Playground", link: "/playground" }
+]
+
 const Header = props => {
     const classes = useStyles()
+    const [anchorEl, setAnchorEl] = useState(null)
+    
     const { title } = props
+
+    const openMenu = e => {
+        setAnchorEl(e.currentTarget)
+    }
+    
+    const handleMenuClose = () => {
+        setAnchorEl(null)
+    }
+
     return (
         <header>
             <div className={classes.root}>
@@ -51,8 +69,28 @@ const Header = props => {
                 <span className="title">
                     {title || 'Reacto'}
                 </span>
-                <i class="fas fa-bars menuBtn"></i>
+                <button type="button" onClick={openMenu} className="menubtn">
+                    <i class="fas fa-bars ico"></i>
+                </button>
+                
             </div>
+            <nav>
+                <Menu
+                    id="main-menu"
+                    anchorEl={anchorEl}
+                    keepMounted
+                    open={Boolean(anchorEl)}
+                    onClose={handleMenuClose}
+                    >
+                    {
+                        menu.map(m => 
+                            <MenuItem onClick={handleMenuClose}>
+                                <Link to={m.link} className="undecorated">{m.title}</Link>
+                            </MenuItem>
+                        )
+                    }
+                </Menu>
+            </nav>
         </header>
     )
 }

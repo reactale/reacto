@@ -1,7 +1,0 @@
-((r.if. 5=5 )) {{
-  This text should be visible. Hi 5!
-}}
-
-((r.if. 5=6 )) {{
-  This text should NOT be visible. Sorry 6!
-}}

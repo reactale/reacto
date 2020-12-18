@@ -112,7 +112,10 @@ const Playground = props => {
                             <option aria-label="None" value="" />
                             {
                                 listOfExamples.map(ex => 
-                                <option value={ex.fileUrl} className={classes.option}>
+                                <option 
+                                    key={ex.fileUrl} 
+                                    value={ex.fileUrl} 
+                                    className={classes.option}>
                                     {ex.name}
                                 </option>
                                 )

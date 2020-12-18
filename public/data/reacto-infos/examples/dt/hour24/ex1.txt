@@ -1,1 +1,0 @@
-Current hour in 24 hour format is ((r.dt.hour24))
