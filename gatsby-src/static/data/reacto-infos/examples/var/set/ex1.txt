@@ -1,0 +1,7 @@
+Setting variable is invisible to readers.
+
+set variables like this ((r.var.name = Mr. Reacto))
+
+And when needed we can get them like this,
+
+The name we set earlier was ((r.var.name))

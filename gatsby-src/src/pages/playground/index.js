@@ -1,9 +1,14 @@
-import React, { useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 // import { Link } from "gatsby"
 import { Layout } from '../../components/common'
-import { Container, Grid, Box, makeStyles } from '@material-ui/core'
+import { Container, Grid, Box, makeStyles, InputLabel, Select } from '@material-ui/core'
+import { getListOfExamples, getExampleCode } from '../../services/data.service'
 
 const useStyles = makeStyles({
+    option: {
+        padding: '2px 15px',
+        cursor: 'default'
+    },
     editor: {
         background: '#000',
         marginTop: 25,
@@ -66,6 +71,12 @@ const Playground = props => {
     const classes = useStyles()
     const inRef = useRef()
     const outRef = useRef()
+    const [listOfExamples, setListOfExamples] = useState([])
+    const [exampleUrl, setExampleUrl] = useState('')
+
+    useEffect(() => {
+        getListOfExamples().then(r => setListOfExamples(r))
+    }, [])
 
     const convert = () => {
         let rTxt = inRef.current.value
@@ -74,15 +85,40 @@ const Playground = props => {
         outRef.current.innerHTML = rTxt
     }
 
+    const handleChangeExample = e => {
+        let exampleFileUrl = e.target.value
+        setExampleUrl(exampleFileUrl)
+        getExampleCode(exampleFileUrl)
+        .then(code => inRef.current.value = code)
+    }
+
     return (
         <Layout title="Playground">
             <Container maxWidth="lg">
                 <Box
                     mb={8}
                 >
-
-
                 <Grid container spacing={1}>
+
+                    <Grid item xs={12} className={"mt-25"}>
+                        <InputLabel id="load-example-select-label">Load Example</InputLabel>
+                        <Select
+                            labelId="load-example-select-label"
+                            id="load-example-select"
+                            fullWidth
+                            value={exampleUrl}
+                            onChange={handleChangeExample}
+                        >
+                            <option aria-label="None" value="" />
+                            {
+                                listOfExamples.map(ex => 
+                                <option value={ex.fileUrl} className={classes.option}>
+                                    {ex.name}
+                                </option>
+                                )
+                            }
+                        </Select>
+                    </Grid>
                     <Grid item xs={12} md={6}>
                         <div className={classes.editor}>
                             <div className="header">

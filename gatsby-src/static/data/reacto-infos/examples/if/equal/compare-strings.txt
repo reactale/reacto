@@ -1,0 +1,9 @@
+((r.if. Superman = Superman )) {{
+  Only Superman can match the power of Superman.
+  This text will be Visible.
+}}
+
+((r.if. Sun = Moon )) {{
+  Sun is not Moon.
+  This text will be Invisible
+}}

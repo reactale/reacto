@@ -1,0 +1,3 @@
+Current second is ((r.dt.sec))
+
+Click on the "Convert" button again and again to see the second output change with current seconds value in real time

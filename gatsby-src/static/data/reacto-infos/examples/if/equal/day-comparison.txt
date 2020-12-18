@@ -1,0 +1,9 @@
+((r.if. r.dt.day = sun)) {{ day is Sunday }}\
+((r.if. r.dt.day = mon)) {{ day is Monday }}\
+((r.if. r.dt.day = tue)) {{ day is Tuesday }}\
+((r.if. r.dt.day = wed)) {{ day is Wednesday }}\
+((r.if. r.dt.day = thu)) {{ day is Thursday }}\
+((r.if. r.dt.day = fri)) {{ day is Friday }}\
+((r.if. r.dt.day = sat)) {{ day is Saturday }}\
+
+If we see current day above, then the test is successful ...
