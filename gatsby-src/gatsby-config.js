@@ -10,7 +10,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-load-script',
       options: {
-        src: 'rto.all.min.js', // Change to the script filename
+        src: '/rto.all.min.js', // Change to the script filename
       },
     },
     {

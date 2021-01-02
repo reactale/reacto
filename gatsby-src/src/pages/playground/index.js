@@ -89,7 +89,10 @@ const Playground = props => {
         let exampleFileUrl = e.target.value
         setExampleUrl(exampleFileUrl)
         getExampleCode(exampleFileUrl)
-        .then(code => inRef.current.value = code)
+        .then(code => {
+            inRef.current.value = code
+            outRef.current.innerHTML = ''
+        })
     }
 
     return (
