@@ -156,6 +156,17 @@
 						"fileUrl": "var/calc-result/ex1.txt"
 					}
 				]
+			},
+			{
+				"name": "((r.var.text = some text with some r.var.someVar ))",
+				"info": "Putting r.var inside r.var",
+				"desc": "yields the result of parent r.var along with interpretation of internal r.var real time",
+				"examples": [
+					{
+						"name": "Interpolating / nesting r.var",
+						"fileUrl": "var/var-inside-var/ex1.txt"
+					}
+				]
 			}
 		]
 	},
