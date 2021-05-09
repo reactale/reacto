@@ -197,7 +197,7 @@ const Home = props => {
                     <p className="subtext">Makes Texts Reactive</p>
                     <div className="shortcuts">
                         <Link to="/cheatsheet" className="icolink">
-                        <i class="fas fa-receipt fico"></i>
+                        <i className="fas fa-receipt fico"></i>
                             <span>cheatsheet</span>
                         </Link>
                         <Link to="/reactos" className="icolink">

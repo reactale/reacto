@@ -70,7 +70,7 @@ const Header = props => {
                     {title || 'Reacto'}
                 </span>
                 <button type="button" onClick={openMenu} className="menubtn">
-                    <i class="fas fa-bars ico"></i>
+                    <i className="fas fa-bars ico"></i>
                 </button>
                 
             </div>

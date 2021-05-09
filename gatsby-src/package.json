@@ -1,12 +1,11 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "reacto",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Reacto - Make Text Reactive",
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
-    "deploy": "gatsby build && rm -rf /var/www/html/reacto/* && cp -r ~/codes/reacto/gatsby-src/public/* /var/www/html/reacto/",
     "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run dev",
