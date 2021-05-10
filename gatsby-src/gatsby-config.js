@@ -5,6 +5,12 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: 'Reacto - The Reactive Tokens',
+    description: `Reacto helps make static texts dynamic. 
+    Reacto breathes life to plain old boring texts and make them alive`,
+    author: 'Suman Barick'
+  },
   /* Your site config here */
   plugins: [
     {

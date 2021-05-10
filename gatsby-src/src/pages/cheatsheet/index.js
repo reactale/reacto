@@ -22,7 +22,7 @@ export default Cheatsheet
 
 export const pageQuery = graphql`
   query {
-    markdownRemark(fileAbsolutePath: { regex: "/cheatsheet.md/" }) {
+    markdownRemark(fileAbsolutePath: { regex: "/pages/cheatsheet.md/" }) {
       html
     }
   }
