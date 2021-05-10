@@ -41,8 +41,8 @@ const useStyles = makeStyles({
 
 const menu = [
     { title: "Home", link: "/" },
-    { title: "Documentation", link: "/reactos" },
-    { title: "CheatSheet", link: "/cheatsheet" },
+    { title: "Documentation", link: "/docs/dt" },
+    { title: "CheatSheet", link: "/docs/cheatsheet" },
     { title: "Playground", link: "/playground" }
 ]
 

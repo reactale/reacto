@@ -76,11 +76,12 @@ const useStyles = makeStyles({
                 justifyContent: 'center',
                 width: 90,
                 color: '#fff',
-                textDecoration: 'none'
+                textDecoration: 'none',
+                fontSize: 15
             },
 
             '& .icolink:hover': {
-                transform: 'scale(1.2)'
+                transform: 'translateY(-5px)'
             },
 
             '& .cheatsheet': {
@@ -196,14 +197,15 @@ const Home = props => {
                     </Link>
                     <p className="subtext">Makes Texts Reactive</p>
                     <div className="shortcuts">
-                        <Link to="/cheatsheet" className="icolink">
-                        <i className="fas fa-receipt fico"></i>
+                        <Link to="/docs/dt" className="icolink">
+                            <i className="fas fa-list-ul fico list"></i>
+                            <span>documents</span>
+                        </Link>
+                        <Link to="/docs/cheatsheet" className="icolink">
+                            <i className="fas fa-receipt fico"></i>
                             <span>cheatsheet</span>
                         </Link>
-                        <Link to="/reactos" className="icolink">
-                            <i className="fas fa-list-ul fico list"></i>
-                            <span>reactos</span>
-                        </Link>
+                        
                         <Link to="/playground" className="icolink">
                             <i className="fas fa-terminal fico terminal"></i>
                             <span>playground</span>

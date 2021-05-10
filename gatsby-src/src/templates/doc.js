@@ -1,20 +1,29 @@
 import * as React from "react"
+import { Container, Box } from '@material-ui/core'
 import { graphql } from "gatsby"
-// import MasterLayout from '../layouts/masterlayout'
+import { Layout } from '../components/common'
 
 // import Bio from "../components/bio"
 // import Seo from "../components/seo"
 
 const DocTemplate = ({ data, location }) => {
-  const post = data.markdownRemark
-  // const siteTitle = data.site.siteMetadata?.title || `Title`
-  // const { previous, next } = data
+    const post = data.markdownRemark
+    // const siteTitle = data.site.siteMetadata?.title || `Title`
+    // const { previous, next } = data
 
-  return (
-      <div>
-          {post.frontmatter.title}
-      </div>
-  )
+
+    return (
+        <Layout title="CheatSheet">
+            <Container maxWidth="md">
+                <Box
+                    mb={8}
+                    className="markdown-body ulist"
+                    dangerouslySetInnerHTML={{ __html: post.html }}
+                ></Box>
+            </Container>
+        </Layout>
+
+    )
 }
 
 export default DocTemplate
