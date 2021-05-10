@@ -84,7 +84,7 @@ const Header = props => {
                     >
                     {
                         menu.map(m => 
-                            <MenuItem onClick={handleMenuClose}>
+                            <MenuItem onClick={handleMenuClose} key={m.title}>
                                 <Link to={m.link} className="undecorated">{m.title}</Link>
                             </MenuItem>
                         )

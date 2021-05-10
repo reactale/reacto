@@ -171,7 +171,7 @@ const Home = props => {
         const processRto = () => {
             if(window.rto) {
                 const procsdTxt = {}
-                procsdTxt.yearDiff = window.rto.process(`((r.calc. r.dt.year - 2019))`)
+                procsdTxt.yearDiff = window.rto.process(`((r.cfg.setLocale.en))((r.calc. r.dt.year - 2019))`)
                 procsdTxt.monthDate = window.rto.process(`((r.dt.month)) ((r.dt.date))`)
                 setProcessedTxt(procsdTxt)
             }
@@ -295,7 +295,7 @@ const Home = props => {
                 {/* SECTION */}
                 <Box mt={5} className={classes.simpleSec}>
                     <h1 className="header">How to Use</h1>
-                    <p className="para mt-5 responsive-text">
+                    <div className="para mt-5 responsive-text">
                         There are various to get started with reactos,
                         <ul className="mt-5 ulist">
                             <li className="mt-5">
@@ -308,7 +308,7 @@ const Home = props => {
                                 <Link to="playground">The Playground</Link> - Try the examples given or write something of your own, it's a playground.
                             </li>
                         </ul>
-                    </p>
+                    </div>
                 </Box>
 
                 {/* SECTION */}

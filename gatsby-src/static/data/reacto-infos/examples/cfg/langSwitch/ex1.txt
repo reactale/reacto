@@ -6,7 +6,7 @@ In Bengali,((r.cfg.setLocale.bn))
 today is a ((r.dt.day)) of a ((r.dt.month))
 and time is ((r.dt.hour24)):((r.dt.min)):((r.dt.sec))
 
-In Oriya,((r.cfg.langSwitch.or)) 
+In Gujrati,((r.cfg.setLocale.gu))
 today is a ((r.dt.day)) of a ((r.dt.month))
 and time is ((r.dt.hour24)):((r.dt.min)):((r.dt.sec))
 
@@ -14,6 +14,6 @@ In Hindi,((r.cfg.setLocale.hi))
 today is a ((r.dt.day)) of a ((r.dt.month))
 and time is ((r.dt.hour24)):((r.dt.min)):((r.dt.sec))
 
-In Malayalam,((r.cfg.langSwitch.mal))
+In Marathi,((r.cfg.setLocale.mr))
 today is a ((r.dt.day)) of a ((r.dt.month))
 and time is ((r.dt.hour24)):((r.dt.min)):((r.dt.sec))

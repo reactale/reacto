@@ -73,9 +73,12 @@ const Playground = props => {
     const outRef = useRef()
     const [listOfExamples, setListOfExamples] = useState([])
     const [exampleUrl, setExampleUrl] = useState('')
+    const [langs, setLangs] = useState({})
 
     useEffect(() => {
         getListOfExamples().then(r => setListOfExamples(r))
+
+        setLangs(window.rto.getLocales() || {})
     }, [])
 
     const convert = () => {
@@ -103,7 +106,7 @@ const Playground = props => {
                 >
                 <Grid container spacing={1}>
 
-                    <Grid item xs={12} className={"mt-25"}>
+                    <Grid item xs={12} sm={6} className={"mt-25"}>
                         <InputLabel id="load-example-select-label">Load Example</InputLabel>
                         <Select
                             labelId="load-example-select-label"
@@ -120,6 +123,28 @@ const Playground = props => {
                                     value={ex.fileUrl} 
                                     className={classes.option}>
                                     {ex.name}
+                                </option>
+                                )
+                            }
+                        </Select>
+                    </Grid>
+                    <Grid item xs={12} sm={6} className={"mt-25"}>
+                        <InputLabel id="available-language-codes-label">Language Codes</InputLabel>
+                        <Select
+                            labelId="available-language-codes-label"
+                            id="available-language-codes"
+                            fullWidth
+                            // value={exampleUrl}
+                            // onChange={handleChangeExample}
+                        >
+                            <option aria-label="None" value="" />
+                            {
+                                Object.keys(langs).map(langCode => 
+                                <option 
+                                    key={langCode} 
+                                    value={langCode} 
+                                    className={classes.option}>
+                                    { `${langs[langCode]} - ${langCode}` }
                                 </option>
                                 )
                             }
