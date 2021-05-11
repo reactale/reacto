@@ -103,39 +103,6 @@ a {
   }
 /**************************************************************/
 
-.context-menu {
-    background: #000;
-    color: var(--theme-color);
-    display: inline-block;
-    /* padding: 15px 0 5px; */
-    position: absolute;
-    top: 45px;
-    left: 0;
-}
-.context-menu .toggler {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-}
-/* .context-menu .title {
-    padding: 0 10px;
-    margin: 0;
-    text-align: center;
-} */
-.context-menu ul {
-    list-style: none;
-    padding: 5px 0;
-    margin: 0;
-}
-.context-menu ul li + li {
-    border-top: 1px solid var(--theme-color);
-}
-.context-menu ul li a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-}
 
 /**************************************************************
 * MEDIA QUERIES

@@ -5,7 +5,10 @@ import { makeStyles, Menu, MenuItem } from '@material-ui/core'
 const useStyles = makeStyles({
     root: {
         background: "var(--theme-color)",
-        padding: '',
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
         display: 'flex',
         alignItems: 'center',
         height: 45,

@@ -2,7 +2,8 @@ import React from 'react'
 import { Header, Footer } from '../index'
 
 const styles = {
-    minHeight: 'calc(100vh - 75px)'
+    minHeight: 'calc(100vh - 75px)',
+    marginTop: 60
 }
 
 const Layout = props => {
