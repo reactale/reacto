@@ -1,7 +1,7 @@
 ---
-title: Yoho... The CheatSheet
+title: Cheatsheet
 description: DateTime Reacto
-slug: dt-reacto
+path: cheatsheet
 ---
 
 # Reacto Cheat Sheet

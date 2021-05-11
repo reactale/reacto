@@ -1,7 +1,7 @@
 ---
-title: ((r.dt.))
+title: DateTime Reacto
 description: DateTime Reacto
-slug: dt-reacto
+path: dt
 ---
 
 # DateTime Reacto ((r.dt.))

@@ -1,19 +1,21 @@
 import * as React from "react"
 import { Container, Box } from '@material-ui/core'
 import { graphql } from "gatsby"
-import { Layout } from '../components/common'
+import { Layout, ContextMenu } from '../components/common'
 
 // import Bio from "../components/bio"
 // import Seo from "../components/seo"
 
 const DocTemplate = ({ data, location }) => {
     const post = data.markdownRemark
+    const docMenu = data.allMarkdownRemark.edges.map(edge => edge.node.frontmatter)
     // const siteTitle = data.site.siteMetadata?.title || `Title`
     // const { previous, next } = data
 
 
     return (
         <Layout title="CheatSheet">
+            <ContextMenu menu={docMenu} menuRoot="/docs"></ContextMenu>
             <Container maxWidth="md">
                 <Box
                     mb={8}
@@ -44,6 +46,16 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+      }
+    }
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/docs/"}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+          }
+        }
       }
     }
   }

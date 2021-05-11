@@ -1,7 +1,7 @@
 ---
-title: ((r.cfg.))
+title: Config Reacto
 description: Configuration Reacto
-slug: config-reacto
+path: cfg
 ---
 
 # Calculator Reacto ((r.cfg.))

@@ -1,7 +1,7 @@
 ---
-title: ((r.calc.))
+title: Calculate Reacto
 description: Calculator Reacto
-slug: calc-reacto
+path: calc
 ---
 
 # Calculator Reacto ((r.calc.))

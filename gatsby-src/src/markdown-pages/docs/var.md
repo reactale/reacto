@@ -1,7 +1,7 @@
 ---
-title: ((r.var.))
+title: Variable Reacto
 description: Variable Reacto
-slug: var-reacto
+path: var
 ---
 
 # Calculator Reacto ((r.calc.))

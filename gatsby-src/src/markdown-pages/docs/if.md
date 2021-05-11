@@ -1,7 +1,7 @@
 ---
-title: ((r.if.))
+title: Conditional Reacto
 description: Conditional Reacto
-slug: conditional-reacto
+path: if
 ---
 
 # Calculator Reacto ((r.if.))
