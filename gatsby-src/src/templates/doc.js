@@ -15,7 +15,7 @@ const DocTemplate = ({ data, location }) => {
 
     return (
         <Layout title="CheatSheet">
-            <ContextMenu menu={docMenu} menuRoot="/docs"></ContextMenu>
+            <ContextMenu menu={docMenu} menuRoot="/docs" title="Documents"></ContextMenu>
             <Container maxWidth="md">
                 <Box
                     mb={8}
