@@ -76,7 +76,7 @@ const ContextMenu = props => {
                 <ul>
                 {
                     menu.map(m => <li key={m.title}>
-                        <Link to={`${menuRoot}/${m.path}`}>{m.title}</Link>
+                        <Link to={`/${m.slug}`}>{m.title}</Link>
                     </li>)
                 }
                 </ul>

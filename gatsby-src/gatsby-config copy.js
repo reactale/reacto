@@ -26,12 +26,7 @@ module.exports = {
         path: `${__dirname}/src/markdown-pages`,
       },
     },
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        extensions: [`.md`, `.mdx`],
-      },
-    },
+    `gatsby-transformer-remark`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-material-ui`
   ],

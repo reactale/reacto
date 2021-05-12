@@ -2,6 +2,7 @@
 title: Variable Reacto
 description: Variable Reacto
 path: var
+slug: docs/var
 ---
 
 # Calculator Reacto ((r.calc.))

@@ -2,6 +2,7 @@
 title: Calculate Reacto
 description: Calculator Reacto
 path: calc
+slug: docs/calc
 ---
 
 # Calculator Reacto ((r.calc.))

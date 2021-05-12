@@ -2,6 +2,7 @@
 title: Conditional Reacto
 description: Conditional Reacto
 path: if
+slug: docs/if
 ---
 
 # Calculator Reacto ((r.if.))

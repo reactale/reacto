@@ -2,6 +2,7 @@
 title: Cheatsheet
 description: DateTime Reacto
 path: cheatsheet
+slug: cheatsheet
 ---
 
 # Reacto Cheat Sheet

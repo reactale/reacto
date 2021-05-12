@@ -2,6 +2,7 @@
 title: Config Reacto
 description: Configuration Reacto
 path: cfg
+slug: docs/cfg
 ---
 
 # Calculator Reacto ((r.cfg.))

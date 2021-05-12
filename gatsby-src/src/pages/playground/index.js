@@ -3,6 +3,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import { Layout } from '../../components/common'
 import { Container, Grid, Box, makeStyles, InputLabel, Select } from '@material-ui/core'
 import { getListOfExamples, getExampleCode } from '../../services/data.service'
+import { getQueryObj } from '../../services/util.service'
 
 const useStyles = makeStyles({
     option: {
@@ -77,9 +78,16 @@ const Playground = props => {
 
     useEffect(() => {
         getListOfExamples().then(r => setListOfExamples(r))
-
         setLangs(window.rto.getLocales() || {})
     }, [])
+
+    useEffect(() => {
+        const rtxt = getQueryObj(props.location.search).rtxt
+        if (rtxt) {
+            inRef.current.value = decodeURIComponent(rtxt)
+        }
+        
+    }, [props.location.search])
 
     const convert = () => {
         let rTxt = inRef.current.value
