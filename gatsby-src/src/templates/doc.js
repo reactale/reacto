@@ -2,7 +2,7 @@ import * as React from "react"
 import { Container, Box } from '@material-ui/core'
 import { graphql } from "gatsby"
 import { Layout, ContextMenu } from '../components/common'
-import { MDXProvider } from "@mdx-js/react"
+// import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
 // import Bio from "../components/bio"
@@ -43,7 +43,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
-        path
         slug
       }
     }

@@ -28,11 +28,14 @@ const useStyles = makeStyles({
         '& .toggler': {
             position: 'absolute',
             top: 0,
-            right: -28,
+            right: -26,
             padding: 7,
             // right: -38,
             // padding: '7px 7px 7px 17px',
-            background: '#000'
+            background: '#000',
+            color: 'var(--theme-color)',
+            outline: 'none',
+            border: 'none'
         },
         '&.collapsed .toggler': {
             opacity: .3
@@ -59,7 +62,7 @@ const useStyles = makeStyles({
 })
 
 const ContextMenu = props => {
-    const { menu, menuRoot, title } = props
+    const { menu, title } = props
     const classes = useStyles()
     const [isVisible, setIsVisible] = useState(window.innerWidth > 1380 ? true : false)
 
@@ -70,7 +73,10 @@ const ContextMenu = props => {
 
     return (
         <div className={clsx("context-menu", classes.root, !isVisible && 'collapsed')}>
-            <i className="fas fa-bars toggler" onClick={() => setIsVisible(!isVisible)}></i>
+            <button type="button" className="toggler" onClick={() => setIsVisible(!isVisible)}>
+                <i className="fas fa-bars"></i>
+            </button>
+            
             <div className="inner-container">
                 { title && <h4 className="title">{title}</h4> }
                 <ul>
