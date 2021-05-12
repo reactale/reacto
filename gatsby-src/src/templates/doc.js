@@ -22,6 +22,7 @@ const DocTemplate = props => {
             <Container maxWidth="md">
                 <Box
                     mb={8}
+                    pt={1}
                     className="markdown-body ulist"
                     // dangerouslySetInnerHTML={{ __html: post.html }}
                 >

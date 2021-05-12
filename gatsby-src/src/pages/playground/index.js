@@ -82,9 +82,12 @@ const Playground = props => {
     }, [])
 
     useEffect(() => {
-        const rtxt = getQueryObj(props.location.search).rtxt
+        let rtxt = getQueryObj(props.location.search).rtxt
         if (rtxt) {
-            inRef.current.value = decodeURIComponent(rtxt)
+            rtxt = decodeURIComponent(rtxt)
+            inRef.current.value = rtxt
+            const plainTxt = window.rto.process(rtxt)
+            outRef.current.innerHTML = plainTxt
         }
         
     }, [props.location.search])

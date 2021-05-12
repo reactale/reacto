@@ -76,6 +76,9 @@ a {
 .undecorated {
     text-decoration: none !important;
 }
+p {
+    margin-top: 20px;
+}
 /**************************************************************/
 
 /**************************************************************
@@ -84,7 +87,7 @@ a {
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
-    height: 5px;
+    height: 7px;
   }
   
   /* Track */
