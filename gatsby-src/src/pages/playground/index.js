@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 // import { Link } from "gatsby"
-import { Layout } from '../../components/common'
+import { Layout, RTxtEditor } from '../../components/common'
 import { Container, Grid, Box, makeStyles, InputLabel, Select } from '@material-ui/core'
 import { getListOfExamples, getExampleCode } from '../../services/data.service'
 import { getQueryObj } from '../../services/util.service'
@@ -70,11 +70,11 @@ const useStyles = makeStyles({
 
 const Playground = props => {
     const classes = useStyles()
-    const inRef = useRef()
     const outRef = useRef()
     const [listOfExamples, setListOfExamples] = useState([])
     const [exampleUrl, setExampleUrl] = useState('')
     const [langs, setLangs] = useState({})
+    const [srcRTxt, setSrcRTxt] = useState('')
 
     useEffect(() => {
         getListOfExamples().then(r => setListOfExamples(r))
@@ -85,17 +85,16 @@ const Playground = props => {
         let rtxt = getQueryObj(props.location.search).rtxt
         if (rtxt) {
             rtxt = decodeURIComponent(rtxt)
-            inRef.current.value = rtxt
+            setSrcRTxt(rtxt)
             const plainTxt = window.rto.process(rtxt)
             outRef.current.innerHTML = plainTxt
         }
         
     }, [props.location.search])
 
-    const convert = () => {
-        let rTxt = inRef.current.value
-        if(!rTxt) return
-        rTxt = window.rto.process(rTxt)
+    const convert = editedRTxt => {
+        if(!editedRTxt) return
+        const rTxt = window.rto.process(editedRTxt)
         outRef.current.innerHTML = rTxt
     }
 
@@ -104,7 +103,7 @@ const Playground = props => {
         setExampleUrl(exampleFileUrl)
         getExampleCode(exampleFileUrl)
         .then(code => {
-            inRef.current.value = code
+            setSrcRTxt(code)
             outRef.current.innerHTML = ''
         })
     }
@@ -162,25 +161,11 @@ const Playground = props => {
                         </Select>
                     </Grid>
                     <Grid item xs={12} md={6}>
-                        <div className={classes.editor}>
-                            <div className="header">
-                                Reactive Text
-                                <button 
-                                    type="button"
-                                    className="convertbtn" 
-                                    onClick={convert}
-                                >
-                                    <i className="fas fa-play"></i>&nbsp;Convert
-                                </button>
-                            </div>
-                            <textarea 
-                                ref={inRef}
-                                className="writearea"
-                                spellCheck="false"
-                                placeholder="Write reactive text (text + reacto) here ..."
-                            ></textarea>
-                        </div>
-                        
+                        <RTxtEditor
+                            btnFn={convert}
+                            btnTxt="Convert"
+                            rTxt={srcRTxt}
+                        />
                     </Grid>
 
                     <Grid item xs={12} md={6}>

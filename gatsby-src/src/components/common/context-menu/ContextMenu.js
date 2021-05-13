@@ -16,7 +16,7 @@ const useStyles = makeStyles({
         // height: 'calc(100vh - 45px)',
         // maxHeight: 'calc(100vh - 45px)',
         zIndex: 9,
-        transition: 'all 500ms linear',
+        transition: 'all 300ms linear',
         '&.collapsed': {
             // transform: 'translateX(-187px)'
             transform: 'translateX(-177px)'

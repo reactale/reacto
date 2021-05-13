@@ -1,9 +1,56 @@
 ---
 title: DateTime Reacto
-description: DateTime Reacto
+description: DateTime reactos help us working with various date and time scenarios in a reactive text
 slug: docs/dt
 ---
 
-# DateTime Reacto ((r.dt.))
+import { RTOCodeBlock } from '../../components/common';
 
-Here I will show the uses of Date Time reactos
+# DateTime Reacto `((r.dt.))`
+
+DateTime reactos help us working with various date and time scenarios in a reactive text
+
+
+## A. Get Date and Time
+
+### A.1. List of dt reactos
+
+It's pretty easy to get any part of the current date / time using the DateTime reacto. Here goes the full list
+
+- `((r.dt.date))` yields today's date, a number only, e.g. 27
+
+- `((r.dt.day))` yields current day's name in the week, e.g. Sunday
+
+- `((r.dt.month))` yields current month, e.g. February
+
+- `((r.dt.year))` yields current year, e.g. 2018
+
+- `((r.dt.hour))` yields current hour in 12 hour format, e.g. 9 AM
+
+- `((r.dt.hour24))` yields current hour in 24 hour format, e.g. 21
+
+- `((r.dt.min))` yields current minute, a number only, e.g. 18
+
+- `((r.dt.sec))` yields current minute, a number only, e.g. 36
+
+
+### A.2. Examples
+
+<RTOCodeBlock>
+
+```
+
+Today's date is ((r.dt.date))
+Today is ((r.dt.day))
+Current month is ((r.dt.month))
+Current year is ((r.dt.year))
+Current hour in 12 hours format is ((r.dt.hour))
+Current hour in 24 hours format is ((r.dt.hour24))
+Current minute is ((r.dt.min))
+Current second is ((r.dt.sec))
+
+Full Date => ((r.dt.year))-((r.dt.month))-((r.dt.date))
+Full Time => ((r.dt.hour24)):((r.dt.min)):((r.dt.sec))
+```
+
+</RTOCodeBlock>
