@@ -12,6 +12,7 @@ const useStyles = makeStyles({
         display: 'flex',
         alignItems: 'center',
         height: 45,
+        zIndex: 9,
         '& .logolink': {
             textDecoration: 'none',
             color: '#fff',

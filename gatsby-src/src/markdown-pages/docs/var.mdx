@@ -9,16 +9,23 @@ import { RTOCodeBlock } from '../../components/common';
 
 The purpose of variable reactos are to store data which can later be retrieved used for display, calculation etc.
 
+
 ## A. Set Data and Get Data 
 
+
+### A.1. Set Data `((r.var.key = value))`
 We can store any kind of data/value in a variable reacto. 
 
 The format to store the data is `((r.var.keyName = any number or text value here))`
 
 Here **keyName** can be any text, without a space i.e. it should be a single word.
 
-And to retrieve the same data, we just need to give the correct keyName whose data we want to get, `((r.var.keyName))`
 
+### A.2. Get Data `((r.var.key))`
+To retrieve the same data, we just need to give the correct keyName whose data we want to get, `((r.var.keyName))`
+
+
+### A.3. Examples of Set and Get
 
 <RTOCodeBlock>
 
@@ -32,6 +39,43 @@ And to retrieve the same data, we just need to give the correct keyName whose da
 My Favourite Color: ((r.var.favColor))
 My Lucky Number: ((r.var.favNumber))
 I think: ((r.var.aLongText))
+```
+
+</RTOCodeBlock>
+
+To see how they can be used with the *calc-reactos* [go to calc-reactos documentation page](/docs/calc)
+
+## B. Special Variables
+
+### B.1. Get the Calculation Results `((r.var._n))`
+
+Whenever we do any calculation using the `calc` reato, the result is automatically saved in memory. 
+
+These results can be retrieved using the syntax `((r.var._n))` , where `n` starts from last, i.e. 1, and then goes on n+1, n+2, n+3 and so on ...
+
+To illustrate the **ordering**, if we want to get the
+- **last result**, we will say `((r.var._1))`
+- **2nd last result**, we will say `((r.var._2))`
+- **3rd from the last result**, we will say `((r.var._3))`
+- **4th from the last result**, we will say `((r.var._4))`
+- so on and so forth ...
+
+These special reacto variables can be used like any other *variable-reactos*. To see how they can be used with the *calc-reactos* [go to calc-reactos documentation page](/docs/calc)
+
+### B.2. Examples
+<RTOCodeBlock>
+
+```
+# First let's do some calculations
+((r.calc. 2 + 7))   // 9
+((r.calc. 5 - 2))   // 3
+((r.calc. 9 * 2))   // 18
+
+# Later we can retrieve them
+# In the order last to first, by
+((r.var._1))    // 18
+((r.var._2))    // 3
+((r.var._3))    // 9
 ```
 
 </RTOCodeBlock>

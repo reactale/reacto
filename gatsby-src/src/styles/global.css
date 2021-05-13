@@ -55,6 +55,10 @@ a {
 .markdown-body li {
     margin-bottom: 5px;
 }
+.markdown-body ul {
+    padding-left: 40px;
+    margin-top: 15px;
+}
 /**************************************************************
 * UTILITY CLASSES
 **************************************************************/
