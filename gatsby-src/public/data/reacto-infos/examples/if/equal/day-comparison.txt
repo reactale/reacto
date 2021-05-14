@@ -1,0 +1,15 @@
+((r.if. r.dt.day = Sunday)) {{ We all love Sundays }}\
+\
+((r.if. r.dt.day = Monday)) {{ Oh God! It's Monday, back to work :( }}\
+\
+((r.if. r.dt.day = Tuesday)) {{ Sun shines the brightest on Tuesdays ... }}\
+\
+((r.if. r.dt.day = Wednesday)) {{ Yey, Wednesday means half the week done!! }}\
+\
+((r.if. r.dt.day = Thursday)) {{ Thursday is the day of the Gods... Or is it? }}\
+\
+((r.if. r.dt.day = Friday)) {{ Friday is The Best Day of the Week... }}\
+\
+((r.if. r.dt.day = Saturday)) {{ Hey, relax, it's a Saturday }}\
+
+If we see the correct quote corresponding to 'today' above, then the test is successful ...

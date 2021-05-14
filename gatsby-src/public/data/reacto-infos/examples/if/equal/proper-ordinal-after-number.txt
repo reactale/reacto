@@ -1,0 +1,6 @@
+((r.var.eth = th))
+((r.if. r.dt.date = 1)) {{ ((r.var.eth = st)) }}
+((r.if. r.dt.date = 2)) {{ ((r.var.eth = nd)) }}
+((r.if. r.dt.date = 3)) {{ ((r.var.eth = rd)) }}
+
+Today is ((r.dt.date))((r.var.eth)) day of ((r.dt.month)) ...

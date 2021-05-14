@@ -1,0 +1,102 @@
+[
+    {
+        "name": "dt - Date example",
+        "fileUrl": "dt/date/ex1.txt"
+    },
+    {
+        "name": "dt - Day example",
+        "fileUrl": "dt/day/ex1.txt"
+    },
+    {
+        "name": "dt - Month example",
+        "fileUrl": "dt/month/ex1.txt"
+    },
+    {
+        "name": "dt - Year example",
+        "fileUrl": "dt/year/ex1.txt"
+    },
+    {
+        "name": "dt - Hour example",
+        "fileUrl": "dt/hour/ex1.txt"
+    },
+    {
+        "name": "dt - Hour-24 example",
+        "fileUrl": "dt/hour24/ex1.txt"
+    },
+    {
+        "name": "dt - Minute example",
+        "fileUrl": "dt/min/ex1.txt"
+    },
+    {
+        "name": "dt - Second example",
+        "fileUrl": "dt/sec/ex1.txt"
+    },
+    {
+        "name": "cfg - Language switching example",
+        "fileUrl": "cfg/langSwitch/ex1.txt"
+    },
+    {
+        "name": "var - Setting Variable",
+        "fileUrl": "var/set/ex1.txt"
+    },
+    {
+        "name": "var - Setting Variable Multiline",
+        "fileUrl": "var/set/ex2.txt"
+    },
+    {
+        "name": "var - Getting Variable",
+        "fileUrl": "var/get/ex1.txt"
+    },
+    {
+        "name": "var - Getting Results of all Calc Reactos",
+        "fileUrl": "var/calc-result/ex1.txt"
+    },
+    {
+        "name": "var - r.var inside another r.var",
+		"fileUrl": "var/var-inside-var/ex1.txt"
+    },
+    {
+        "name": "calc - Adding numbers and reactos",
+        "fileUrl": "calc/add-1.txt"
+    },
+    {
+        "name": "if - Compare 2 numbers",
+        "fileUrl": "if/equal/compare-numbers.txt"
+    },
+    {
+        "name": "if - Compare 2 strings",
+        "fileUrl": "if/equal/compare-strings.txt"
+    },
+    {
+        "name": "if - Compare number with reacto",
+        "fileUrl": "if/equal/compare-number-with-reacto.txt"
+    },
+    {
+        "name": "if - Compare string with reacto",
+        "fileUrl": "if/equal/compare-string-with-reacto.txt"
+    },
+    {
+        "name": "if - Compare reacto with reacto",
+        "fileUrl": "if/equal/comparing-2-reactos.txt"
+    },
+    {
+        "name": "if - Proper ordinal number",
+        "fileUrl": "if/equal/proper-ordinal-after-number.txt"
+    },
+    {
+        "name": "if - Comparing months",
+        "fileUrl": "if/equal/month-comparison.txt"
+    },
+    {
+        "name": "if - Comparing days of week",
+        "fileUrl": "if/equal/day-comparison.txt"
+    },
+    {
+        "name": "if - Not Equal example 1",
+        "fileUrl": "if/not-equal/ex1.txt"
+    },
+    {
+        "name": "if - Greater or Less - 1",
+        "fileUrl": "if/misc/multi-if-1.txt"
+    }
+]

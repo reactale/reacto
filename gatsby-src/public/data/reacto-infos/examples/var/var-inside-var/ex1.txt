@@ -1,0 +1,21 @@
+We can have 1 level interpolation / nesting of var inside another var.
+These inner vars are interpreted in real time 
+that means, if we change them elsewhere, those changes will be reflected when we read the parent var
+
+Use the Outer var as template to hold the inner vars which can be changed later as needed
+
+((r.var.text =
+    The real identity of r.var.hero is r.var.name
+))\
+
+Example 1
+----------
+((r.var.hero = Superman))\
+((r.var.name = Clark Kent))\
+((r.var.text))
+
+Example 2
+----------
+((r.var.hero = Spiderman))\
+((r.var.name = Peter Parker))\
+((r.var.text))

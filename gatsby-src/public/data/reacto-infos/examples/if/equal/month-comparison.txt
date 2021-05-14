@@ -1,0 +1,14 @@
+((r.if. r.dt.month = January)) {{ Month is January }}\
+((r.if. r.dt.month = January)) {{ Month is January }}\
+((r.if. r.dt.month = March)) {{ Month is March }}\
+((r.if. r.dt.month = April)) {{ Month is April }}\
+((r.if. r.dt.month = May)) {{ Month is May }}\
+((r.if. r.dt.month = June)) {{ Month is June }}\
+((r.if. r.dt.month = July)) {{ Month is July }}\
+((r.if. r.dt.month = August)) {{ Month is August }}\
+((r.if. r.dt.month = September)) {{ Month is September }}\
+((r.if. r.dt.month = October)) {{ Month is October }}\
+((r.if. r.dt.month = November)) {{ Month is November }}\
+((r.if. r.dt.month = December)) {{ Month is December }}\
+
+If we see current month above, then the test is successful ...
