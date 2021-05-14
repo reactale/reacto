@@ -2,3 +2,7 @@
 # Auto Create Gatsby Posts from .md and .mdx using MDX
 
 https://dev.to/adamgoth/building-a-blog-with-gatsby-and-mdx-2eh9#:~:text=Setting%20up&text=We%20will%20create%20a%20posts,for%20using%20MDX%20within%20Gatsby.
+
+
+# Firebase Dynamic Link Documentation
+https://firebase.google.com/docs/reference/dynamic-links/link-shortener

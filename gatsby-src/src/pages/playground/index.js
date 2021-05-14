@@ -1,10 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react'
 // import { Link } from "gatsby"
+import axios from 'axios'
 import { Layout, RTxtEditor } from '../../components/common'
-import { Container, Grid, Box, makeStyles, InputLabel, Select } from '@material-ui/core'
+import { Container, Grid, Box, makeStyles, InputLabel, Select, Button } from '@material-ui/core'
 import { getListOfExamples, getExampleCode } from '../../services/data.service'
-import { getQueryObj } from '../../services/util.service'
-
+import { getQueryObj, encodeForUrl, decodeFromUrl } from '../../services/util.service'
+const FDLKEY = 'AIzaSyCW26msFzzqowPPbCPZTloukOzlw7aBD3g'    // FDLKEY = Firebase Dynamic Link Key
 const useStyles = makeStyles({
     option: {
         padding: '2px 15px',
@@ -67,6 +68,7 @@ const useStyles = makeStyles({
         
     }
 })
+let savedShortLinks = {}    // to prevent an user to create shortLinks for same thing repeatedly
 
 const Playground = props => {
     const classes = useStyles()
@@ -84,7 +86,7 @@ const Playground = props => {
     useEffect(() => {
         let rtxt = getQueryObj(props.location.search).rtxt
         if (rtxt) {
-            rtxt = atob(decodeURIComponent(rtxt))
+            rtxt = decodeFromUrl(rtxt)
             setSrcRTxt(rtxt)
             const plainTxt = window.rto.process(rtxt)
             outRef.current.innerHTML = plainTxt
@@ -108,8 +110,45 @@ const Playground = props => {
         })
     }
 
+    const shareRTxt = () => {
+        const rTxt = document.getElementById('src-text-code-outer').querySelector('textarea').value
+        if(!rTxt) {
+            alert('Nothing to share ...')
+            return
+        }
+
+        const longUrl = `${window.location.origin}/playground?rtxt=${encodeForUrl(rTxt)}`
+
+        const postURl = `https://firebasedynamiclinks.googleapis.com/v1/shortLinks?key=${FDLKEY}`
+
+        /**
+         * Response Structure
+         * {
+                "shortLink": string,    (the thing to share)
+                "previewLink": string   (an awesome flowchart)
+            }
+         */
+        axios.post(postURl, { 
+            dynamicLinkInfo: {
+                domainUriPrefix: 'https://reacto.page.link',
+                link: longUrl
+            },
+            suffix: {
+                option: 'SHORT'
+            }
+         })
+        .then(res => {
+            console.log(res)
+
+        })
+        // console.log(longUrl)
+    }
+
     return (
-        <Layout title="Playground">
+        <Layout 
+            title="Playground" 
+            description="Online editor for reacto which let's users test or play with reacto(s) and share the reactive text with the world"
+        >
             <Container maxWidth="lg">
                 <Box
                     mb={8}
@@ -160,7 +199,7 @@ const Playground = props => {
                             }
                         </Select>
                     </Grid>
-                    <Grid item xs={12} md={6}>
+                    <Grid id="src-text-code-outer" item xs={12} md={6}>
                         <RTxtEditor
                             btnFn={convert}
                             btnTxt="Convert"
@@ -173,6 +212,17 @@ const Playground = props => {
                             <div className="header">Converted Text</div>
                             <div ref={outRef} className="output">Converted text will appear here ...</div>
                         </div>
+                    </Grid>
+
+                    <Grid item xs={12}>
+                        <Button 
+                            variant="outlined" 
+                            color="secondary"
+                            endIcon={<i className="fas fa-share"></i>}
+                            onClick={shareRTxt}
+                        >
+                            Share
+                        </Button>
                     </Grid>
                 </Grid>
                     

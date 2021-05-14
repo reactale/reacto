@@ -6,9 +6,8 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'Reacto - The Reactive Tokens',
-    description: `Reacto helps make static texts dynamic. 
-    Reacto breathes life to plain old boring texts and make them alive`,
+    title: 'Reacto - Makes Text Reactive',
+    description: `This website is about Reacto, the sub project of Reactale. Reacto is a small token that can be embedded in static text to make it dynamic / reactive.`,
     author: 'Suman Barick'
   },
   /* Your site config here */

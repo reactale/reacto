@@ -9,3 +9,7 @@ export const getQueryObj = qString => {
 
     return qObj
 }
+
+export const encodeForUrl = txt => btoa(encodeURIComponent(txt))
+
+export const decodeFromUrl = txt => decodeURIComponent(atob(decodeURIComponent(txt)))   // 2 layer of decoding required
