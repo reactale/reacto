@@ -1,6 +1,6 @@
 import React from 'react'
 // import clsx from 'clsx'
-// import { Button, makeStyles } from '@material-ui/core'
+import { Box } from '@material-ui/core'
 import { RTxtEditor } from '../'
 
 // const useStyles = makeStyles({
@@ -16,14 +16,14 @@ const RTOCodeBlock = props => {
     }
 
     return (
-        <div lang="rto">
+        <Box lang="rto" mb={6}>
             <RTxtEditor
                 btnFn={goToPlayground}
                 btnTxt="Playground"
             >
                 { children }
             </RTxtEditor>
-        </div>
+        </Box>
     )
 }
 

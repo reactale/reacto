@@ -1,0 +1,106 @@
+---
+title: Conditional Reacto
+description: Conditional reacto (if-reacto) helps us do something based on a condition
+slug: docs/if
+order: 3
+---
+
+import { RTOCodeBlock } from '../../components/common';
+
+# Conditional Reacto `((r.if.))`
+
+Conditional reacto (if-reacto) helps us do something based on a condition
+
+
+## A. The Structure and The Operators
+
+### A.1. The Structure
+The structure of if-reacto is a but different than other reactos. Inside the reacto body itself it will have the condition i.e. `((r.if. some_condition ))` and then after the reacto, inside double curly braces we will have the thing that we want it to perform.
+
+So, the structure is,
+```
+((r.if. some_condition)) {{ 
+    if_the_condition_is_true
+    then_come_here
+ }}
+```
+
+The condition to be checked will have a structure of `operand operator operand`, the `operands` can be any number or text or any reacto that resolves to a number or text.
+
+### A.2. The Operators
+The available conditional / logical operators are,
+- Equal `=`
+- Not Equal `!=`
+- Greater Than `>`
+- Greater Than Or Equal `>=`
+- Less Than `<`
+- Less Than Or Equal `<=`
+
+## B. Usages and Exmaples
+
+### B.1. Check If Equal `=`
+
+If 2 things are equal, then do something.
+
+#### Examples
+
+<RTOCodeBlock>
+
+```
+# Equality Check
+
+# Direct Number Check
+((r.if. 5 = 5)) {{ Yes, obviously they are equal }}
+((r.if. 5 = 6)) {{ This line will NOT get printed }}\
+
+# Direct Text Check
+((r.if. Sky is blue = Sky is blue)) {{ Yeah, yeah, the sky is blue ... }}
+((r.if. Sky is blue = Sky is red)) {{ Nope, false, hence no print for this one ... }}\
+
+# One operand a reacto
+((r.if. r.dt.year = 2021)) {{ This text will be printed only if the current year matches }}
+((r.if. r.dt.day = Friday)) {{ If current day matches, show this text }}
+
+# Both operand reactos
+((r.var.myFavColor = Blue))\
+((r.var.yourFavColor = Orange))\
+((r.var.guessMonth = May))\
+((r.if. r.var.myFavColor = r.var.yourFavColor)) {{ We both love ((r.var.myFavColor)) }}
+((r.if. r.var.guessMonth = r.dt.month)) {{ This text will be printed only if current month is what we guessed }}
+```
+
+</RTOCodeBlock>
+
+
+### B.2. Check If NOT Equal `!=`
+
+If 2 things are NOT equal, then do something.
+
+#### Examples
+
+<RTOCodeBlock>
+
+```
+# Equality Check
+
+# Direct Number Check
+((r.if. 5 != 5)) {{ False, no print }}\
+((r.if. 5 != 6)) {{ True, 5 is not equal to 6 }}
+
+# Direct Text Check
+((r.if. Sky is blue != Sky is blue)) {{ False, as they are equal }}\
+((r.if. Sky is blue != Sky is red)) {{ True, two texts are not the same }}
+
+# One operand a reacto
+((r.if. r.dt.year != 2018)) {{ This will show only if the current year is not 2018 }}\
+((r.if. r.dt.day != Friday)) {{ If current day does not match, show this text }}
+
+# Both operand reactos
+((r.var.myFavColor = Blue))\
+((r.var.yourFavColor = Orange))\
+((r.var.guessMonth = May))\
+((r.if. r.var.myFavColor != r.var.yourFavColor)) {{ True, our favourite colors are different }}
+((r.if. r.var.guessMonth != r.dt.month)) {{ True, if we guessed wrong month }}
+```
+
+</RTOCodeBlock>

@@ -13,6 +13,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             frontmatter {
               title
               slug
+              order
             }
           }
         }
@@ -26,7 +27,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // create blog post pages
   const posts = result.data.allMdx.edges
-  const docMenu = result.data.allMdx.edges.map(edge => edge.node.frontmatter) 
+  const docMenu = result.data.allMdx.edges.map(edge => edge.node.frontmatter).sort((a,b) => parseFloat(a.order)-parseFloat(b.order))
 
   // call `createPage` for each result
   posts.forEach(({ node }, index) => {

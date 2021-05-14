@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import clsx from 'clsx'
 import { Link } from "gatsby"
 import { makeStyles } from '@material-ui/core'
-
 const useStyles = makeStyles({
     root: {
         background: '#000',
@@ -23,7 +22,8 @@ const useStyles = makeStyles({
         },
         '& .inner-container': {
             height: '100%',
-            overflow: 'auto'
+            overflow: 'auto',
+            paddingTop: 24
         },
         '& .toggler': {
             position: 'absolute',
@@ -49,6 +49,12 @@ const useStyles = makeStyles({
             listStyle: 'none',
             padding: '5px 0',
             margin: 0,
+            '& li.selected': {
+                background: '#fff',
+                '& a': {
+                    color: '#000'
+                }
+            },
             '& li + li': {
                 borderTop: '1px solid var(--theme-color)'
             },
@@ -62,14 +68,17 @@ const useStyles = makeStyles({
 })
 
 const ContextMenu = props => {
-    const { menu, title } = props
+    const { menu, title, selectedSlug } = props
     const classes = useStyles()
-    const [isVisible, setIsVisible] = useState(window.innerWidth > 1380 ? true : false)
+    const [isVisible, setIsVisible] = useState(false)
 
     useEffect(() => {
-        setIsVisible(window.innerWidth > 1380 ? true : false)
+        if (typeof (window) !== `undefined`) {
+            setIsVisible(window.innerWidth > 1380 ? true : false)
+        }
     }, 
     [])
+
 
     return (
         <div className={clsx("context-menu", classes.root, !isVisible && 'collapsed')}>
@@ -81,7 +90,8 @@ const ContextMenu = props => {
                 { title && <h4 className="title">{title}</h4> }
                 <ul>
                 {
-                    menu.map(m => <li key={m.title}>
+                    menu.map(m => 
+                    <li key={m.title} className={clsx(selectedSlug === m.slug && 'selected')}>
                         <Link to={`/${m.slug}`}>{m.title}</Link>
                     </li>)
                 }

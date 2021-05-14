@@ -17,8 +17,8 @@ const DocTemplate = props => {
 
 
     return (
-        <Layout title="CheatSheet">
-            <ContextMenu menu={docMenu}></ContextMenu>
+        <Layout title="Documents">
+            <ContextMenu menu={docMenu} selectedSlug={mdx.frontmatter.slug}></ContextMenu>
             <Container maxWidth="md">
                 <Box
                     mb={8}

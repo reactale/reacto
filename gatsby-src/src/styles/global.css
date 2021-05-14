@@ -20,6 +20,13 @@ body {
     padding: 0;
     margin: 0;
 }
+pre code {
+    background: #000 !important;
+    color: #fff;
+    display: block;
+    border-radius: 4px !important;
+    padding: 15px !important;
+}
 .reacto-logo {
     display: inline-flex;
     height: 30px;
@@ -51,6 +58,9 @@ a {
 }
 .markdown-body h3 {
     margin-top: 25px;
+}
+.markdown-body h4 {
+    margin-top: 20px;
 }
 .markdown-body li {
     margin-bottom: 5px;

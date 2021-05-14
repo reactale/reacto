@@ -1,0 +1,52 @@
+---
+title: Config Reacto
+description: Config reacto helps change the configuration of the reactos that comes after it
+slug: docs/cfg
+order: 5
+---
+import { RTOCodeBlock } from '../../components/common';
+
+# Config Reacto ((r.cfg.))
+
+Config reacto helps change the configuration of the reactos that comes after it
+
+
+## Changing Language
+
+With the help of config-reacto, we can change the output languages of all the reactos that comes after it.
+
+Syntax: `((r.cfg.setLocale.LANGUAGE_CODE))`
+
+The `LANGUAGE_CODE` is any valid language short codes that the particular browser supports. The full list of can be found at [reacto playground](/playground) under the dropdown named *Language Codes*.
+
+**A Note on Browser Support**: Please note that list contains all the languages that will be supported by all the browsers, one day, maybe in future. In my current testing I have found that, surprisingly, * **Microsoft Edge** is supporting more languages than **Google Chrome** *.
+
+<RTOCodeBlock>
+
+```
+# In English,((r.cfg.setLocale.en)) 
+today is a ((r.dt.day)) of a ((r.dt.month))
+and time is ((r.dt.hour24)):((r.dt.min)):((r.dt.sec))
+
+# In Bengali,((r.cfg.setLocale.bn)) 
+today is a ((r.dt.day)) of a ((r.dt.month))
+and time is ((r.dt.hour24)):((r.dt.min)):((r.dt.sec))
+
+# In Gujrati,((r.cfg.setLocale.gu))
+today is a ((r.dt.day)) of a ((r.dt.month))
+and time is ((r.dt.hour24)):((r.dt.min)):((r.dt.sec))
+
+# In Hindi,((r.cfg.setLocale.hi)) 
+today is a ((r.dt.day)) of a ((r.dt.month))
+and time is ((r.dt.hour24)):((r.dt.min)):((r.dt.sec))
+
+# In Marathi,((r.cfg.setLocale.mr))
+today is a ((r.dt.day)) of a ((r.dt.month))
+and time is ((r.dt.hour24)):((r.dt.min)):((r.dt.sec))
+
+# Set things back to English
+# Or else, next reacto will get affected
+((r.cfg.setLocale.en)) 
+```
+
+</RTOCodeBlock>

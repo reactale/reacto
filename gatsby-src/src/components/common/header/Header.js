@@ -40,6 +40,15 @@ const useStyles = makeStyles({
                 fontSize: 27,
             }
         }
+    },
+    menu: {
+        '& li': {
+            padding: 0
+        },
+        '& li a': {
+            width: '100%',
+            padding: '5px 15px'
+        }
     }
 })
 
@@ -85,6 +94,7 @@ const Header = props => {
                     keepMounted
                     open={Boolean(anchorEl)}
                     onClose={handleMenuClose}
+                    className={classes.menu}
                     >
                     {
                         menu.map(m => 

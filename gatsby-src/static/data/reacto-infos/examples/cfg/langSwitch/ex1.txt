@@ -17,3 +17,7 @@ and time is ((r.dt.hour24)):((r.dt.min)):((r.dt.sec))
 In Marathi,((r.cfg.setLocale.mr))
 today is a ((r.dt.day)) of a ((r.dt.month))
 and time is ((r.dt.hour24)):((r.dt.min)):((r.dt.sec))
+
+# Set things back to English
+# Or else, next reacto will get affected
+((r.cfg.setLocale.en)) 

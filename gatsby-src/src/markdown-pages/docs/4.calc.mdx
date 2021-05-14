@@ -1,0 +1,117 @@
+---
+title: Calc Reacto
+description: Calc Reacto helps us calculate simple arithmatics inside reactive text 
+slug: docs/calc
+order: 4
+---
+import { RTOCodeBlock } from '../../components/common';
+
+# Calc Reacto `((r.calc.))`
+
+Calc Reacto helps us calculate simple arithmatics inside reactive text.
+
+
+## A. The Structure and The Operators
+
+### A.1. The Structure
+
+The structure of calc-reacto is very simple, viz. `operand operator operand`. The operands can be numbers or any reacto that can be resolved to a number.
+
+So, it is,
+```
+((r.calc. operand operator operand))
+```
+
+### A.2. The Operators
+
+The available mathematic operators are,
+- Addition `+`
+- Subtraction `-`
+- Multiplication `*`
+- Division `/`
+
+
+## B. Usages and Exmaples
+
+### B.1. Addition `+`
+
+<RTOCodeBlock>
+
+```
+# Direct Number Addition
+((r.calc. 2 + 7))   // should give 9
+
+# One operand a reacto
+After 5 years: ((r.calc. r.dt.year + 5))
+
+# Both operand reactos
+((r.var.num1 = 9))\
+((r.var.num2 = 3))\
+((r.calc. r.var.num1 + r.var.num2)) // should give 12
+```
+
+</RTOCodeBlock>
+
+
+### B.2. Subtraction `-`
+
+<RTOCodeBlock>
+
+```
+# Direct Number Subtraction
+((r.calc. 10 - 1))   // should give 9
+
+# One operand a reacto
+After 5 ago: ((r.calc. r.dt.year - 5))
+
+# Both operand reactos
+((r.var.num1 = 9))\
+((r.var.num2 = 3))\
+((r.calc. r.var.num1 - r.var.num2)) // should give 6
+```
+
+</RTOCodeBlock>
+
+
+### B.3. Multiplication `*`
+
+<RTOCodeBlock>
+
+```
+# Direct Number Multiplication
+((r.calc. 2 * 7))   // Should give 14
+
+# One operand a reacto
+((r.calc. r.dt.year * 10))
+
+# Both operand reactos
+((r.var.num1 = 9))\
+((r.var.num2 = 3))\
+((r.calc. r.var.num1 * r.var.num2)) // should give 27
+```
+
+</RTOCodeBlock>
+
+
+### B.4. Division `/`
+
+<RTOCodeBlock>
+
+```
+# Direct Number Division
+((r.calc. 10 / 2))   // should give 5
+
+# One operand a reacto
+((r.calc. r.dt.year / 10))
+
+# Both operand reactos
+((r.var.num1 = 30))\
+((r.var.num2 = 3))\
+((r.calc. r.var.num1 / r.var.num2)) // should give 10
+```
+
+</RTOCodeBlock>
+
+
+
+
