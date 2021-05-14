@@ -12,7 +12,7 @@ const RTOCodeBlock = props => {
     // const classes = useStyles()
 
     const goToPlayground = rTxt => {
-        window.open(`/playground?rtxt=${encodeURIComponent(rTxt)}`)
+        window.open(`/playground?rtxt=${encodeURIComponent(btoa(rTxt))}`)
     }
 
     return (

@@ -84,7 +84,7 @@ const Playground = props => {
     useEffect(() => {
         let rtxt = getQueryObj(props.location.search).rtxt
         if (rtxt) {
-            rtxt = decodeURIComponent(rtxt)
+            rtxt = atob(decodeURIComponent(rtxt))
             setSrcRTxt(rtxt)
             const plainTxt = window.rto.process(rtxt)
             outRef.current.innerHTML = plainTxt
