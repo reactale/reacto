@@ -43,6 +43,9 @@ pre code {
 a {
     color: orangered;
 }
+ul {
+    padding-left: 20px;
+}
 .ulist, .ulist * {
     list-style: square;
 }

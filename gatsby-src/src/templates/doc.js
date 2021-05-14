@@ -17,7 +17,11 @@ const DocTemplate = props => {
 
 
     return (
-        <Layout title="Documents">
+        <Layout 
+          title={mdx.frontmatter.title}
+          description={mdx.frontmatter.description}
+          header="Documents"
+        >
             <ContextMenu menu={docMenu} selectedSlug={mdx.frontmatter.slug}></ContextMenu>
             <Container maxWidth="md">
                 <Box

@@ -7,7 +7,7 @@ const styles = {
 }
 
 const Layout = props => {
-    const { children, title, description } = props
+    const { children, header, title, description } = props
 
     return (
         <div>
@@ -15,7 +15,7 @@ const Layout = props => {
                 title={title}
                 description={description}
             />
-            <Header title={title} />
+            <Header title={header || title} />
             <div style={styles}>
                 {children}
             </div>

@@ -69,6 +69,13 @@ const useStyles = makeStyles({
     }
 })
 let savedShortLinks = {}    // to prevent an user to create shortLinks for same thing repeatedly
+const SHORT_LINKS = "SHORT_LINKS"
+
+const saveLinkToLocalStorage = (longUrl, shortUrl) => {
+    savedShortLinks[longUrl] = shortUrl
+    // Now save the New Links Object to LocalStorage
+    localStorage.setItem(SHORT_LINKS, JSON.stringify(savedShortLinks))
+}
 
 const Playground = props => {
     const classes = useStyles()
@@ -81,6 +88,9 @@ const Playground = props => {
     useEffect(() => {
         getListOfExamples().then(r => setListOfExamples(r))
         setLangs(window.rto.getLocales() || {})
+
+        // get saved short links from localStorage
+        savedShortLinks = JSON.parse(localStorage.getItem(SHORT_LINKS) || '{}')
     }, [])
 
     useEffect(() => {
@@ -119,6 +129,12 @@ const Playground = props => {
 
         const longUrl = `${window.location.origin}/playground?rtxt=${encodeForUrl(rTxt)}`
 
+        // See if it is already present in localStorage
+        if(savedShortLinks[longUrl]) {
+            alert('Share this link with anyone: ' + savedShortLinks[longUrl])
+            return
+        }
+
         const postURl = `https://firebasedynamiclinks.googleapis.com/v1/shortLinks?key=${FDLKEY}`
 
         /**
@@ -139,8 +155,20 @@ const Playground = props => {
          })
         .then(res => {
             console.log(res)
+            const { data, status } = res
+            if (status === 200) {
+                const { shortLink } = data
+                saveLinkToLocalStorage(longUrl, shortLink)
 
+                alert('Share this link with anyone: ' + shortLink)
+            }
+            else {
+                alert("Couldn't generate the short link ...")
+            }
+            // const { shortLink } 
+            // 
         })
+        .catch(err => alert("Couldn't generate the short link ..."))
         // console.log(longUrl)
     }
 
