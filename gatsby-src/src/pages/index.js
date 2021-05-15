@@ -186,7 +186,7 @@ const Home = props => {
     }, [])
     return (
         <div className={classes.home}>
-            <Seo/>
+            <Seo title="Reacto Landing" />
 
             {/* THE BANNER */}
             <div className={clsx(classes.topBanner, 'home-banner')}>
@@ -302,10 +302,10 @@ const Home = props => {
                         There are various to get started with reactos,
                         <ul className="mt-5 ulist">
                             <li className="mt-5">
-                                <Link to="/reactos">Official Docs</Link> - Everything on all the reactos available e.g definitions, examples, use-cases etc.
+                                <Link to="/docs/dt">Official Docs</Link> - Everything on all the reactos available e.g definitions, examples, use-cases etc.
                             </li>
                             <li className="mt-5">
-                                <Link to="cheatsheet">The CheatSheet</Link> - One page that sums up everything, for a quick lookup or later reference.
+                                <Link to="/docs/cheatsheet">The CheatSheet</Link> - One page that sums up everything, for a quick lookup or later reference.
                             </li>
                             <li className="mt-5">
                                 <Link to="playground">The Playground</Link> - Try the examples given or write something of your own, it's a playground.

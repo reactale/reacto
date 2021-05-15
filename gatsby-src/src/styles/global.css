@@ -99,6 +99,10 @@ ul {
 p {
     margin-top: 20px;
 }
+.hide,
+.hidden {
+    display: none !important;
+}
 /**************************************************************/
 
 /**************************************************************
@@ -126,6 +130,65 @@ p {
     cursor: default;
   }
 /**************************************************************/
+
+/**************************************************************
+* LOADER
+**************************************************************/
+#rto-loader {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, .9);
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#rto-loader .logobox {
+    height: 90px;
+    width: 90px;
+    /* border: 1px solid #ccc; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--theme-color);
+    position: relative;
+    margin-bottom: 15px;
+}
+#rto-loader .logobox .el-r {
+    font-size: 72px;
+}
+#rto-loader .logobox .rotator {
+    border: 12px double var(--theme-color);
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 45px;
+    transform-origin: center;
+    animation: rto-logo-rotate 4s linear 0s infinite normal;
+}
+#rto-loader .text {
+    font-size: 22px;
+}
+@keyframes rto-logo-rotate {
+    0% { transform: rotate(0); }
+    15% { transform: rotate(90deg); }
+    25% { transform: rotate(90deg); }
+    40% { transform: rotate(180deg); }
+    50% { transform: rotate(180deg); }
+    65% { transform: rotate(270deg); }
+    75% { transform: rotate(270deg); }
+    90% { transform: rotate(360deg); }
+    100% { transform: rotate(360deg); }
+}
+
 
 
 /**************************************************************

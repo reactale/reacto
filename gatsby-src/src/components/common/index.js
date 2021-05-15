@@ -5,6 +5,8 @@ import ContextMenu from './context-menu/ContextMenu'
 import RTOCodeBlock from './rto-codeblock/RTOCodeBlock'
 import RTxtEditor from './editor/RTxtEditor'
 import Seo from './seo/Seo'
+import Loader from './loader/Loader'
+
 export {
-    Header, Footer, Layout, ContextMenu, RTxtEditor, RTOCodeBlock, Seo
+    Header, Footer, Layout, ContextMenu, RTxtEditor, RTOCodeBlock, Seo, Loader
 }
