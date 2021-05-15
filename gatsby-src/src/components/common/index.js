@@ -4,6 +4,7 @@ import Layout from './layout/Layout'
 import ContextMenu from './context-menu/ContextMenu'
 import RTOCodeBlock from './rto-codeblock/RTOCodeBlock'
 import RTxtEditor from './editor/RTxtEditor'
+import Seo from './seo/Seo'
 export {
-    Header, Footer, Layout, ContextMenu, RTxtEditor, RTOCodeBlock
+    Header, Footer, Layout, ContextMenu, RTxtEditor, RTOCodeBlock, Seo
 }

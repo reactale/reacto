@@ -20,6 +20,9 @@ body {
     padding: 0;
     margin: 0;
 }
+pre {
+    margin-top: 10px;
+}
 pre code {
     background: #000 !important;
     color: #fff;

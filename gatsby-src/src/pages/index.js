@@ -7,7 +7,7 @@ import ChangeHistoryIcon from '@material-ui/icons/ChangeHistory'
 import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank'
 import RadioButtonUncheckedIcon from '@material-ui/icons/RadioButtonUnchecked'
 // import GridOnIcon from '@material-ui/icons/GridOn'
-import { Footer } from '../components/common'
+import { Footer, Seo } from '../components/common'
 
 const useStyles = makeStyles({
     home: {
@@ -186,6 +186,7 @@ const Home = props => {
     }, [])
     return (
         <div className={classes.home}>
+            <Seo/>
 
             {/* THE BANNER */}
             <div className={clsx(classes.topBanner, 'home-banner')}>
