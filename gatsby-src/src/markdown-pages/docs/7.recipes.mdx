@@ -4,5 +4,65 @@ description: This document contains various use-caes and how-to techniques of al
 slug: docs/recipes
 order: 7
 ---
+import { RTOCodeBlock, H3 } from '../../components/common';
 
-# Reacipes Under Development
+# Reacipes using Reacto(s)
+
+## Menu
+- [Line Break Remover](#h3-line-break-remover)
+- [Long Arithmatic Calculations](#h3-long-arithmatic-calculations)
+
+
+<H3> Line Break Remover </H3>
+
+While using reactos engine, a simple trick to remove a line break is to put a `backslash \` as the last character of the line. Do no put any space after it. It is helpful if we want to use some lines only for some reacto(s) which does not actually print something on the screen. Let's see an example, (notice the backslash at the end of each line)
+
+<RTOCodeBlock>
+
+```
+((r.if. r.dt.day = Sunday)) {{ We all love Sundays }}\
+\
+((r.if. r.dt.day = Monday)) {{ Oh God! It is Monday!!! Back to Work everybody :( }}\
+\
+((r.if. r.dt.day = Tuesday)) {{ Sun shines the brightest on Tuesdays ... }}\
+\
+((r.if. r.dt.day = Wednesday)) {{ Yey, Wednesday means half the week done!! }}\
+\
+((r.if. r.dt.day = Thursday)) {{ Thursday is the day of the Gods... Or is it? }}\
+\
+((r.if. r.dt.day = Friday)) {{ Friday is The Best Day of the Week... }}\
+\
+((r.if. r.dt.day = Saturday)) {{ Hey, relax, it is a Saturday }}
+
+All the lines, except the required one should be gone in the output ...
+```
+
+</RTOCodeBlock>
+
+<H3> Long Arithmatic Calculations </H3>
+
+Reacto(s) was designed to be small and compact. But we can still do arithmatic operations of any length using it. We just need to break the operation into smaller parts, doing 1 step at a time. 
+
+Suppose we want to calculate the following
+```
+( ( ( 5 + 4 ) - 1 ) / 2 ) * 3
+```
+The expected answer is 12
+
+Now let's see, how we can perform the above using reactos,
+
+**Hint**: We need to use the special variable reacto `((r.var._n))` which returns the result of last `nth` calculation. We can use `((r.var._1))` at each step to get the last result.
+
+<RTOCodeBlock>
+
+```
+((r.calc. 5 + 4))
+((r.calc. r.var._1 - 1))
+((r.calc. r.var._1 / 2))
+((r.calc. r.var._1 * 3))
+```
+
+</RTOCodeBlock>
+
+
+
