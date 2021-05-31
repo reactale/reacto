@@ -4,14 +4,21 @@ description: Config reacto helps change the configuration of the reactos that co
 slug: docs/cfg
 order: 5
 ---
-import { RTOCodeBlock } from '../../components/common';
+import { RTOCodeBlock, H2 } from '../../components/common';
 
 # Config Reacto ((r.cfg.))
 
 Config reacto helps change the configuration of the reactos that comes after it
 
 
-## Changing Language
+## Index
+- [Changing Language](#h2-changing-language)
+- [Switching Reacto Printing OFF](#h2-switching-reacto-printing-off)
+- [Switching Reacto Printing ON](#h2-switching-reacto-printing-on)
+
+
+
+<H2> Changing Language </H2>
 
 With the help of config-reacto, we can change the output languages of all the reactos that comes after it.
 
@@ -47,6 +54,49 @@ and time is ((r.dt.hour24)):((r.dt.min)):((r.dt.sec))
 # Set things back to English
 # Or else, next reacto will get affected
 ((r.cfg.setLocale.en)) 
+```
+
+</RTOCodeBlock>
+
+
+
+
+<H2> Switching Reacto Printing OFF </H2>
+
+If we want to do some work (e.g. doing calculations) with reacto(s) but don't want their values to be printed on screen, we can use this reacto. It will print blank for all the reactos that come after it.
+
+Syntax: `((r.cfg.printOff))`
+
+<RTOCodeBlock>
+
+```
+# Before Turning Print OFF
+4 + 5 = ((r.calc. 4 + 5))   // Will show "4 + 5 = 9"
+
+# After Turning Print OFF
+((r.cfg.printOff))\
+4 + 5 = ((r.calc. 4 + 5))   // Will only show "4 + 5 ="
+```
+
+</RTOCodeBlock>
+
+
+<H2> Switching Reacto Printing ON </H2>
+
+This s opposite of `((r.cfg.printOff))`, when we want to turn printing back on
+
+Syntax: `((r.cfg.printOn))`
+
+<RTOCodeBlock>
+
+```
+# Turning Print OFF
+((r.cfg.printOff))\
+10 + 8 = ((r.calc. 10 + 8))   // Will show "10 + 8"
+
+# Turning Print ON
+((r.cfg.printOff))\
+10 + 8 = ((r.calc. 10 + 8))   // Will show "10 + 8 = 18"
 ```
 
 </RTOCodeBlock>

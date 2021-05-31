@@ -3,7 +3,7 @@ import { Header, Footer } from '../index'
 import Seo from '../seo/Seo'
 const styles = {
     minHeight: 'calc(100vh - 75px)',
-    marginTop: 60
+    marginTop: 30
 }
 
 const Layout = props => {
