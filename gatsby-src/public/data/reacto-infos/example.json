@@ -36,6 +36,14 @@
         "fileUrl": "cfg/langSwitch/ex1.txt"
     },
     {
+        "name": "cfg - Turn Reacto Printing OFF",
+        "fileUrl": "cfg/printOff/ex1.txt"
+    },
+    {
+        "name": "cfg - Turn Reacto Printing ON",
+        "fileUrl": "cfg/printOn/ex1.txt"
+    },
+    {
         "name": "var - Setting Variable",
         "fileUrl": "var/set/ex1.txt"
     },

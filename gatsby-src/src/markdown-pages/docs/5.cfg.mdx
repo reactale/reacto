@@ -73,9 +73,11 @@ Syntax: `((r.cfg.printOff))`
 # Before Turning Print OFF
 4 + 5 = ((r.calc. 4 + 5))   // Will show "4 + 5 = 9"
 
-# After Turning Print OFF
-((r.cfg.printOff))\
+# Turn OFF Print ((r.cfg.printOff))
 4 + 5 = ((r.calc. 4 + 5))   // Will only show "4 + 5 ="
+
+# Turn ON Print ((r.cfg.printOn))
+4 + 5 = ((r.calc. 4 + 5))   // Will show "4 + 5 = 9"
 ```
 
 </RTOCodeBlock>
@@ -90,12 +92,10 @@ Syntax: `((r.cfg.printOn))`
 <RTOCodeBlock>
 
 ```
-# Turning Print OFF
-((r.cfg.printOff))\
+# Turn OFF Print ((r.cfg.printOff))
 10 + 8 = ((r.calc. 10 + 8))   // Will show "10 + 8"
 
-# Turning Print ON
-((r.cfg.printOff))\
+# Turn ON Print ((r.cfg.printOn))
 10 + 8 = ((r.calc. 10 + 8))   // Will show "10 + 8 = 18"
 ```
 

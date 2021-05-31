@@ -1,0 +1,5 @@
+# Turn OFF Print ((r.cfg.printOff))
+10 + 8 = ((r.calc. 10 + 8))   // Will show "10 + 8"
+
+# Turn ON Print ((r.cfg.printOn))
+10 + 8 = ((r.calc. 10 + 8))   // Will show "10 + 8 = 18"

@@ -102,13 +102,35 @@
 		"desc": "These reactos help us change various configurations to control the behaviours of other reactos",
 		"reactos": [
 			{
-				"name": "((r.cfg.langSwitch.LLL))",
+				"name": "((r.cfg.setLocale.LLL))",
 				"info": "Change language",
 				"desc": "This reacto changes the language of Reactos to LLL. LLL is the language code of any available language, e.g beng (for Bengali), en (for English), hind (for Hindi), mal (for Malayalam) etc. If the given LLL is not available, then it will default to en",
 				"examples": [
 					{
 						"name": "Language switching example",
-						"fileUrl": "cfg/langSwitch/ex1.txt"
+						"fileUrl": "cfg/setLocale/ex1.txt"
+					}
+				]
+			},
+			{
+				"name": "((r.cfg.printOff))",
+				"info": "Turn Off Printing",
+				"desc": "Reacto(s) coming after it will not print anything",
+				"examples": [
+					{
+						"name": "Reacto Printing Turn OFF example",
+						"fileUrl": "cfg/printOff/ex1.txt"
+					}
+				]
+			},
+			{
+				"name": "((r.cfg.printOn))",
+				"info": "Turn On Printing",
+				"desc": "Reacto(s) coming after it will print as usual",
+				"examples": [
+					{
+						"name": "Reacto Printing Turn ON example",
+						"fileUrl": "cfg/printOn/ex1.txt"
 					}
 				]
 			}

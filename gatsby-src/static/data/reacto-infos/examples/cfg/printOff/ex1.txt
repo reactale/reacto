@@ -1,0 +1,8 @@
+# Before Turning Print OFF
+4 + 5 = ((r.calc. 4 + 5))   // Will show "4 + 5 = 9"
+
+# Turn OFF Print ((r.cfg.printOff))
+4 + 5 = ((r.calc. 4 + 5))   // Will only show "4 + 5 ="
+
+# Turn ON Print ((r.cfg.printOn))
+4 + 5 = ((r.calc. 4 + 5))   // Will show "4 + 5 = 9"
